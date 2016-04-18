@@ -33,7 +33,7 @@ FILM_COUNT.times do
   Film.create(
     category_id: n += 1,
     title: Faker::Book.title,
-    summary: "summary iehoiehfioehfoiq ieghie w ieghio we oweih",
+    summary: Faker::Lorem.paragraphs(4),
     photo: "/images/gallows-poster.jpg")
 end
 
@@ -46,6 +46,7 @@ end
 
 # Ratings for Films
 FILMS= Film.all
+
 FILMS.each do |f|
   f.ratings.build(
     user_id: rand(0..17),
