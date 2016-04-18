@@ -10,3 +10,4 @@ class CreateRatings < ActiveRecord::Migration
     end
   end
 end
+

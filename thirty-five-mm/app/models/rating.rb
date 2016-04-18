@@ -3,5 +3,5 @@ class Rating < ActiveRecord::Base
   belongs_to :review
   belongs_to :user
 
-  validates :ratable, :user, presence: true
+  validates :user, presence: true
 end
