@@ -10,10 +10,12 @@
   </div>
 
   <div class='large-9 columns'>
-    <h2>Synopsis</h2>
-    <p><%= @film.summary %></p>
-    <!-- Link to Create New Comment -> new_film_comment_path -->
-    <span class='button'><%= link_to 'Create a New Comment', '' %></span>
+    <div class='synopsis-container'>
+      <h2>Synopsis</h2>
+      <p><%= @film.summary %></p>
+      <!-- Link to Create New Comment -> new_film_comment_path -->
+      <span class='button'><%= link_to 'Create a New Comment', '' %></span>
+    </div>
     <!-- Synopsis will go here -->
     <!-- Comment box will go here -->
     <!-- Comments index will go here -->
