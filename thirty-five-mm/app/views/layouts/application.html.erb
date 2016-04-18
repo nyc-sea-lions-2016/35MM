@@ -7,28 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<div>
-			
-<!-- <div class="svg-layer"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="" pageAlignment="none" x="0px" y="0px" width="20%" viewBox="0 0 842 595" enable-background="new 0 0 842 595" xml:space="preserve" bodyBackgroundColor="rgba(255,255,255,0)"><defs/><g type="LAYER" name="workspace" id="workspace" locked="true"/><g type="LAYER" name="Layer 01" id="Layer 01"><text type="textBox" transform="matrix(1 0 0 1 150.01515151515102 162.27272727272594)" width="620.4545454545454" height="223" stroke-width="4" stroke-linecap="round" stroke-miterlimit="3" stroke="#000000" fill="#E69823" font-family="Arial" font-weight="bold" font-size="200" text-align="left" text-anchor="start"><tspan x="0" y="200"><![CDATA[35MM]]></tspan></text></g></svg></div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-		</div>
-		<nav>
-			
-		</nav>
-	</header>
 
 <nav class='top-bar' data-topbar role='navigation'>
   <ul class='title-area'>
@@ -39,7 +17,7 @@
 
   <section class='top-bar-section'>
     <ul class='right'>
-    <% unless logged_in? %>
+    <% if logged_in? %>
       <!-- Placeholder... these options will be reserved for trustworthy reviewers -->
       <li><%= link_to 'Log In', login_path %></li>
       <li><%= link_to 'Sign Up', users_new_path %></li>
