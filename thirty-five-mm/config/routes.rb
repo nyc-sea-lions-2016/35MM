@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
-  resources :films, except: [:index, :show] do
+  resources :films, except: [:index] do
     resources :reviews
     resources :comments, except: [:show]
   end
