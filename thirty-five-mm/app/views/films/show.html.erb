@@ -14,12 +14,20 @@
       <h2>Synopsis</h2>
       <p><%= @film.summary %></p>
       <!-- Link to Create New Comment -> new_film_comment_path -->
+    </div>
+
+    <div class='create-new-comment-container'>
       <span class='button'><%= link_to 'Create a New Comment', '' %></span>
     </div>
+
+    <div class='comment-listing-container'>
+      <ul class='comment-listing'>
+        <li><%= @film.comments %></li>
     <!-- Synopsis will go here -->
     <!-- Comment box will go here -->
     <!-- Comments index will go here -->
-  </div>
+      </ul>
+    </div>
 </div>
 
 
