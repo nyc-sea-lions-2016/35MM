@@ -8,6 +8,30 @@
 </head>
 <body>
 
+<nav class='top-bar' data-topbar role='navigation'>
+  <ul class='title-area'>
+    <li class='name'>
+      <h2>35 MM</h2>
+    </li>
+  </ul>
+
+  <section class='top-bar-section'>
+    <ul class='right'>
+    <% unless logged_in? %>
+      <!-- Placeholder... these options will be reserved for trustworthy reviewers -->
+      <li><%= link_to 'Log In', login_path %></li>
+      <li><%= link_to 'Sign Up', users_new_path %></li>
+    <% end %>
+  </ul>
+
+    <ul class='left'>
+      <% if logged_in? %>
+        <li><%= link_to 'Categories Index', '' %></li>
+      <% end %>
+    </ul>
+  </section>
+</nav>
+
 <%= yield %>
 
 </body>
