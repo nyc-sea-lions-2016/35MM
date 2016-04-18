@@ -1,0 +1,19 @@
+h1, h2 {
+  text-align: center;
+}
+
+/*h2 {
+  text-align: center;
+}*/
+
+#film-show-container {
+  max-width: 90%;
+}
+
+.large-9 {
+  background-color: green;
+}
+
+.large-3 {
+  background-color: yellow;
+}
