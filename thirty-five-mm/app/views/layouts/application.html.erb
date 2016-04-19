@@ -20,13 +20,13 @@
     <% if logged_in? %>
       <!-- Placeholder... these options will be reserved for trustworthy reviewers -->
       <li><%= link_to 'Log In', login_path %></li>
-      <li><%= link_to 'Sign Up', '' %></li>
+      <li><%= link_to 'Sign Up', new_user_path %></li>
     <% end %>
   </ul>
 
     <ul class='left'>
       <% if logged_in? %>
-        <li><%= link_to 'Categories Index', '' %></li>
+        <li><%= link_to 'Categories Index', categories_path %></li>
       <% end %>
     </ul>
   </section>

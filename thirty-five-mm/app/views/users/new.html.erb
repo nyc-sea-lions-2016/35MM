@@ -1,0 +1,24 @@
+<h1>Register</h1>
+
+<%= form_for @user, html:{ id:'new-user-form' } do |f| %>
+  <fieldset>
+    <legend>Register</legend>
+
+    <% if @user.errors.any?  %>
+      <%=  @errors.each do | f| %>
+        <%= f %>
+      <% end %>
+    <% end %>
+
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email] %>
+
+    <%= label_tag :username %>
+    <%= text_field_tag :username, params[:username] %>
+
+    <%= label_tag :password %>
+    <%= password_field_tag :password, params[:password] %>
+
+    <%= submit_tag "Register"%>
+  </fieldset>
+<% end %>  

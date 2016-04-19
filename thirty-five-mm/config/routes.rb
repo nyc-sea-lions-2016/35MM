@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :categories
   
-  resources :user, except: :destroy
+  resources :users, except: [:destroy, :index]
 
   root 'categories#index'
 
