@@ -15,6 +15,11 @@
 //= require_tree .
 
 $(document).ready(function() {
+  $(".button_to").on("submit", function(event){
+    event.preventDefault();
+    $("#bgvid").css("position", "absolute")
+
+  })
 
   $('.new-comment-button').on('click', '.button', function(event) {
     event.preventDefault();
@@ -22,7 +27,7 @@ $(document).ready(function() {
       method: 'GET',
       url: $(event.target).attr('href')
     }).then(function(response) {
-      $(event.target).hide()
+      $(event.target).hide();
       $('.create-new-comment-container').append(response);
     });
   });
@@ -42,11 +47,14 @@ $(document).ready(function() {
 
   $('.comment-listing-container').on('click', '.delete-comment-button', function(event) {
     event.preventDefault();
+
     $.ajax({
-      method: 'DELETE',
+      type: "post",
       url: $(event.target).attr('href'),
-      data: { method : delete }
+      data: {"_method": "delete"}
     });
   });
+
+
 
 });
