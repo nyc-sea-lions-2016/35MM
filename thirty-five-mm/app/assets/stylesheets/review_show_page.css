@@ -1,3 +1,28 @@
-#film-image-container {
-  max-width: 90%;
+#jumbotron-image {
+  width: 100%;
 }
+
+.review-column {
+  padding-left: 1%;
+}
+
+.review-title {
+  text-align: center;
+}
+
+.review-author {
+  text-align: center;
+}
+
+.review-info {
+  text-align: center;
+}
+
+#review-container {
+  max-width: 100%
+}
+
+.content-column {
+  background-color: yellow;
+}
+

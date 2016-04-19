@@ -1,38 +1,45 @@
 
-<div class='large-8 large-centered columns'>
-  <div id='film-image-container' class='row'>
-    <%= image_tag('bergman-poster.jpg') %>
-  </div>
+  <div id ='wrapper' class='row'>
 
-  <div id='review-container'>
-    <h2>Hour of the Wolf</h2>
-    <!-- Need to add review title to models/migrations - placeholder for now -->
-    <h3>By <%= @review.user.username %></h3>
-    <span><%= @review.created_at %></span>
-    <span><%= @review.content.length %></span>
+    <div class='medium-4 columns image-column'>
+      <div id='film-image-container'>
+        <%= image_tag('bergman-poster.jpg', :id => 'jumbotron-image') %>
 
-    <p><%= @review.content %></p>
-    <ul class='review-buttons'>
-      <li><%= link_to 'Edit Review', edit_film_review_path(@film, @review), class: 'button' %></li>
-      <li><%= link_to 'Delete Review', film_review_path(@film, @review), method: :delete, confirm: 'Are you sure?', class: 'button' %></li>
-    </ul>
-  </div>
+      </div>
+    </div>
 
-  <div id='review-comments-container'>
-    <h2>Comments</h2>
-    <% if @review.no_comments? %>
-      <h3>No comments to display</h3>
-    <% end %>
-      <ul class='review-comment-listing'>
-      <% @review.comments.reverse.each do |comment| %>
-        <li class='individual-comment'>
-          <p><%= comment.content %></p>
-          <%= link_to 'Delete Comment', "/reviews/#{@review.id}/comments/#{comment.id}", method: :delete, class: 'button delete-comment-button' %>
-        </li>
-      <% end %>
-      </ul>
-      <%= link_to 'Create a New Comment', new_review_comment_path(@review), class: 'button create-new-review-comment-button' %>
-      <div class='create-new-review-comment-container'>
+    <div class='medium-8 columns review-column'>
+      <div id='review-container'>
+        <h2 class='review-title'>Hour of the Wolf</h2>
+        <!-- Need to add review title to models/migrations - placeholder for now -->
+        <h3 class='review-author'>By <%= @review.user.username %></h3>
+        <div class='review-info'>
+          <span><%= @review.created_at.strftime('%F') %> |</span>
+          <span><%= @review.content.length %> Characters</span>
+        </div>
+        <p><%= @review.content %></p>
+        <ul class='review-buttons'>
+          <li><%= link_to 'Edit Review', edit_film_review_path(@film, @review), class: 'button' %></li>
+          <li><%= link_to 'Delete Review', film_review_path(@film, @review), method: :delete, confirm: 'Are you sure?', class: 'button' %></li>
+        </ul>
+      </div>
+
+      <div id='review-comments-container'>
+        <h2>Comments</h2>
+        <% if @review.no_comments? %>
+          <h3>No comments to display</h3>
+        <% end %>
+          <ul class='review-comment-listing'>
+          <% @review.comments.reverse.each do |comment| %>
+            <li class='individual-comment'>
+              <p><%= comment.content %></p>
+              <%= link_to 'Delete Comment', "/reviews/#{@review.id}/comments/#{comment.id}", method: :delete, class: 'button delete-comment-button' %>
+            </li>
+          <% end %>
+          </ul>
+          <%= link_to 'Create a New Comment', new_review_comment_path(@review), class: 'button create-new-review-comment-button' %>
+          <div class='create-new-review-comment-container'>
+        </div>
+      </div>
     </div>
   </div>
-</div>
