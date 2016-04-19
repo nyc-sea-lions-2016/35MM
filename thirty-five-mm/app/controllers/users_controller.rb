@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
 
-  def new 
+  def new
     @user = User.new
 
     render :new
   end
 
-  def create 
+  def create
     @user = User.new(email: params[:email], username: params[:username], password: params[:password])
 
     if @user.save
@@ -14,12 +14,12 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       @errors = @user.errors.full_messages
-      # flash[:errors] = 
-      render :new 
+      # flash[:errors] =
+      render :new
     end
   end
 
-  def update 
+  def update
     @user = User.find_by(id: params[:id])
     @user.assign_attributes(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
     if @user.save
@@ -29,6 +29,9 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
+
+  private
 
   def user_params
     params.require(:user).permit(:username, :email, :password)
