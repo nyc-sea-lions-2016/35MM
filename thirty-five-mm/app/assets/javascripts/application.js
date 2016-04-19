@@ -18,8 +18,9 @@ $(document).ready(function() {
   $(".button_to").on("submit", function(event){
     event.preventDefault();
     $("#bgvid").css("position", "absolute")
-
   })
+
+  //New Comment for a Film - GET
 
   $('.new-comment-button').on('click', '.button', function(event) {
     event.preventDefault();
@@ -31,6 +32,8 @@ $(document).ready(function() {
       $('.create-new-comment-container').append(response);
     });
   });
+
+  //New Comment for a Film - POST
 
   $('.create-new-comment-container').on('submit', '.new_comment', function(event) {
     event.preventDefault();
