@@ -1,4 +1,4 @@
-h1, h2 {
+h1 {
   text-align: center;
 }
 
@@ -19,12 +19,13 @@ h2 {
   /*background-color: blue;*/
 }
 
-.large-9, .large-3 {
+.large-3 {
   margin-top: 4%;
 }
 
 .large-9 {
   /*background-color: green;*/
+  margin-top: 2%;
   padding: 2% 4% 2% 4%;
 }
 
