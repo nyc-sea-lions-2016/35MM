@@ -37,7 +37,16 @@ $(document).ready(function() {
       $(event.target).hide();
       $('.new-comment-header').hide();
       $('.comment-listing').append(response);
-    })
-  })
+    });
+  });
+
+  $('.comment-listing-container').on('click', '.delete-comment-button', function(event) {
+    event.preventDefault();
+    $.ajax({
+      method: 'DELETE',
+      url: $(event.target).attr('href'),
+      data: { method : delete }
+    });
+  });
 
 });
