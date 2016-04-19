@@ -12,20 +12,27 @@
     <span><%= @review.content.length %></span>
 
     <p><%= @review.content %></p>
+    <ul class='review-buttons'>
+      <li><%= link_to 'Edit Review', edit_film_review_path(@film, @review), class: 'button' %></li>
+      <li><%= link_to 'Delete Review', film_review_path(@film, @review), method: :delete, confirm: 'Are you sure?', class: 'button' %></li>
+    </ul>
   </div>
 
   <div id='review-comments-container'>
     <h2>Comments</h2>
     <% if @review.no_comments? %>
       <h3>No comments to display</h3>
-    <% else %>
-      <% @review.comments.each do |comment| %>
-      <ul class='review-comment-listing'>
-        <li><%= comment.content %></li>
-      </ul>
-      <% end %>
     <% end %>
-
+      <ul class='review-comment-listing'>
+      <% @review.comments.reverse.each do |comment| %>
+        <li class='individual-comment'>
+          <p><%= comment.content %></p>
+          <%= link_to 'Delete Comment', "/reviews/#{@review.id}/comments/#{comment.id}", method: :delete, class: 'button delete-comment-button' %>
+        </li>
+      <% end %>
+      </ul>
+      <%= link_to 'Create a New Comment', new_review_comment_path(@review), class: 'button create-new-review-comment-button' %>
+      <div class='create-new-review-comment-container'>
+    </div>
   </div>
-
 </div>
