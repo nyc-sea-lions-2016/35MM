@@ -15,11 +15,16 @@
 //= require_tree .
 
 $(document).ready(function() {
+  $("#categories-index-container").hide();
+
   $(".button_to").on("submit", function(event){
     event.preventDefault();
-    $("#bgvid").css("position", "absolute")
-
-  })
+    $("#bgvid").fadeOut(400)
+    $("body").css("position", "absolute");
+    $("#categories-index-container").show();
+    // $("#categories-index-container").scrollTop(0);
+    $("body").scrollTop(1000);
+  });
 
   $('.new-comment-button').on('click', '.button', function(event) {
     event.preventDefault();
@@ -69,6 +74,7 @@ $(document).ready(function() {
       $('.create-new-review-comment-container').append(response);
     });
   });
+
 
   $('#review-comments-container').on('submit', '.new_comment', function(event) {
     event.preventDefault();
