@@ -1,0 +1,24 @@
+<h1>Edit <%= @user.username %></h1>
+
+<%= form_for @user, html:{ id:'edit-user-form' } do |f| %>
+  <fieldset>
+    <legend>Edit <%= @user.username %></legend>
+
+    <% if @user.errors.any?  %>
+      <%=  @user.errors.each do |e| %>
+        <%= e %>
+      <% end %>
+    <% end %>
+
+    <%= label_tag :email %>
+    <%= text_field_tag :email, @user.email %>
+
+    <%= label_tag :username %>
+    <%= text_field_tag :username, @user.username %>
+
+    <%= label_tag :password %>
+    <%= password_field_tag :password, @user.password %>
+
+    <%= submit_tag "Edit User"%>
+  </fieldset>
+<% end %>  
