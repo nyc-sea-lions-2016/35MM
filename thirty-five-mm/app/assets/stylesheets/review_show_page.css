@@ -22,6 +22,16 @@
   max-width: 100%
 }
 
+#review-comments-container {
+  margin-top: 4%;
+  margin-left: 4%;
+  width: 90%;
+  border-radius: 5px;
+  background-color: gray;
+  padding-top: 4%;
+  padding-left: 6%;
+}
+
 .content-column {
   background-color: yellow;
 }
