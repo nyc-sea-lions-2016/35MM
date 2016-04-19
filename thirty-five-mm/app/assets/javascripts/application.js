@@ -45,6 +45,8 @@ $(document).ready(function() {
     });
   });
 
+  //Delete for Film Comments
+
   $('.comment-listing-container').on('click', '.delete-comment-button', function(event) {
     event.preventDefault();
     $.ajax({
@@ -53,6 +55,34 @@ $(document).ready(function() {
       data: { _method: "delete"}
     });
     $(event.target).closest('.individual-comment').hide();
+  });
+
+  //Add to Review Comments
+
+  $('#review-comments-container').on('click', '.create-new-review-comment-button', function(event) {
+    event.preventDefault();
+    $.ajax({
+      method: 'GET',
+      url: $(event.target).attr('href')
+    }).then(function(response) {
+      $(event.target).hide();
+      $('.create-new-review-comment-container').append(response);
+    });
+  });
+
+  $('#review-comments-container').on('submit', '.new_comment', function(event) {
+    event.preventDefault();
+    $(event.target).hide();
+    $('.new-comment-header').hide();
+    $.ajax({
+      method: 'POST',
+      url: $(event.target).attr('action'),
+      data: $(event.target).serialize()
+    }).then(function(response) {
+    debugger
+      $('.review-comment-listing').prepend(response);
+      $('.create-new-review-comment-button').show();
+    });
   });
 
 
