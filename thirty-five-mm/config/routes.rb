@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   resources :categories
-  
+
   resources :users, except: [:destroy, :index]
 
   root 'categories#index'
@@ -14,4 +14,8 @@ Rails.application.routes.draw do
     resources :reviews
     resources :comments, except: [:show]
   end
+  resources :reviews, only: [] do
+    resources :comments, except: [:show]
+  end
+
 end

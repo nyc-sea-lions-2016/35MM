@@ -47,12 +47,12 @@ $(document).ready(function() {
 
   $('.comment-listing-container').on('click', '.delete-comment-button', function(event) {
     event.preventDefault();
-
     $.ajax({
       type: "post",
       url: $(event.target).attr('href'),
-      data: {"_method": "delete"}
+      data: { _method: "delete"}
     });
+    $(event.target).closest('.individual-comment').hide();
   });
 
 
