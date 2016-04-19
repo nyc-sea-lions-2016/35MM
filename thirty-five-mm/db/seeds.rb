@@ -39,8 +39,8 @@ end
 
 REVIEW_COUNT.times do
   Review.create(
-    film_id: rand(0..29),
-    user_id: rand(0..17),
+    film_id: rand(1..29),
+    user_id: rand(1..17),
     content: Faker::Lorem.paragraph(rand(2..4)))
 end
 
@@ -49,14 +49,14 @@ FILMS= Film.all
 
 FILMS.each do |f|
   f.ratings.build(
-    user_id: rand(0..17),
+    user_id: rand(1..17),
     stars: rand(1..5)
     ).save
 end
 
 FILMS.each do |f|
   f.comments.build(
-    user_id: rand(0..17),
+    user_id: rand(1..17),
     content: Faker::Lorem.paragraphs(4)
     ).save
 end
@@ -65,7 +65,7 @@ end
 REVIEWS = Review.all
 REVIEWS.each do |r|
   r.ratings.build(
-    user_id: rand(0..17),
+    user_id: rand(1..17),
     stars: rand(1..5)
     ).save
 
@@ -74,7 +74,7 @@ end
 # Comments for Reviews
 REVIEWS.each do |r|
   r.comments.build(
-    user_id: rand(0..17),
+    user_id: rand(1..17),
     content: Faker::Lorem.paragraph(rand(1..2))
     ).save
 end
