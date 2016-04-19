@@ -15,10 +15,16 @@
 //= require_tree .
 
 $(document).ready(function() {
+  $("#categories-index-container").hide();
+
   $(".button_to").on("submit", function(event){
     event.preventDefault();
-    $("#bgvid").css("position", "absolute")
-
+    $("#categories-index-container").fadeIn(400).show();
+    // $("#bgvid").css()
+    $("#video-container").slideUp(700, function(){$("#video-container").remove();});
+    $("#categories-index-container").fadeIn(400).show();
+    // $("#bgvid").slideUp("slow", function(){});
+    // $("#bgvid").fadeOut(700, function(){$("#bgvid").remove();});
   })
 
   $('.new-comment-button').on('click', '.button', function(event) {
@@ -54,7 +60,4 @@ $(document).ready(function() {
       data: {"_method": "delete"}
     });
   });
-
-
-
 });
