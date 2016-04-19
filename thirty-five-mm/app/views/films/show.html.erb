@@ -40,7 +40,7 @@
           <% @film.comments.each do |comment| %>
         <li class='individual-comment'>
           <p><%= comment.content %><p>
-          <li><%= link_to 'Delete Comment', "/films/#{@film.id}/comments/#{comment.id}", method: :delete, confirm: 'Are you sure?', class: 'button delete-comment-button' %></li>
+          <li><%= link_to 'Delete Comment', "/films/#{@film.id}/comments/#{comment.id}", class: 'button delete-comment-button' %></li>
         </li>
           <% end %>
     <!-- Synopsis will go here -->

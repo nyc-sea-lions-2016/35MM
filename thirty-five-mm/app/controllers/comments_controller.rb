@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
       render '_comment.html.erb', locals: { film: @film, comment: @comment }, layout: false
     else
       flash.now.alert = 'There was an issue with the creation of your comment'
-      render 'new'
+      render :new
     end
   end
 
@@ -28,9 +28,10 @@ class CommentsController < ApplicationController
 
   def destroy
     @film = Film.find(params[:film_id])
-    @comment = Comment.find(params[:id]).destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
     flash[:success] = "Comment successfully removed"
-    render @film #Fix this portion so that correct redirect occurs
+    render text:"ok" #Fix this portion so that correct redirect occurs
   end
 
   private
