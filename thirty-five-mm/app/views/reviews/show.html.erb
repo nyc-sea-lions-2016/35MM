@@ -1,0 +1,31 @@
+
+<div class='large-8 large-centered columns'>
+  <div id='film-image-container' class='row'>
+    <%= image_tag('bergman-poster.jpg') %>
+  </div>
+
+  <div id='review-container'>
+    <h2>Hour of the Wolf</h2>
+    <!-- Need to add review title to models/migrations - placeholder for now -->
+    <h3>By <%= @review.user.username %></h3>
+    <span><%= @review.created_at %></span>
+    <span><%= @review.content.length %></span>
+
+    <p><%= @review.content %></p>
+  </div>
+
+  <div id='review-comments-container'>
+    <h2>Comments</h2>
+    <% if @review.no_comments? %>
+      <h3>No comments to display</h3>
+    <% else %>
+      <% @review.comments.each do |comment| %>
+      <ul class='review-comment-listing'>
+        <li><%= comment.content %></li>
+      </ul>
+      <% end %>
+    <% end %>
+
+  </div>
+
+</div>

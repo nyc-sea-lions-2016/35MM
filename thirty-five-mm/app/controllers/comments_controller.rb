@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
   def create
     @film = Film.find(params[:film_id])
     @comment = @film.comments.build(comments_params)
+    #Change the following line once sessions/authentication is activated
     @comment.user_id = User.first.id
     if request.xhr? && @comment.save
       flash[:success] = "Comment successfully created"
