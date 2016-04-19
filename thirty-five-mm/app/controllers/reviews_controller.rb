@@ -21,25 +21,40 @@ class ReviewsController < ApplicationController
     end
   end
 
-  def edit
-    @review = Review.find(params[:id])
-  end
-
   def show
     @film = Film.find(params[:film_id])
     @review = Review.find(params[:id])
   end
 
+  def edit
+    @film = Film.find(params[:film_id])
+    @review = Review.find(params[:id])
+  end
+
+
   def update
+    @film = Film.find(params[:film_id])
+    @review = Review.find(params[:id])
+    if @review.update_attributes(reviews_params)
+      flash[:success] = 'Review successfully updated'
+      render :show
+    else
+      flash.now.alert = 'There was an issue with updating your review'
+      render :edit
+    end
   end
 
   def destroy
+    @film = Film.find(params[:film_id])
+    @review = Review.find(params[:id]).destroy
+    flash.now[:success] = 'Review successfully deleted'
+    redirect_to @film
   end
 
   private
 
   def reviews_params
-
+    params.require(:review).permit(:content)
   end
 
 end

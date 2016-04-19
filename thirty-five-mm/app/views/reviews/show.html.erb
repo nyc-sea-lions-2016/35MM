@@ -12,6 +12,10 @@
     <span><%= @review.content.length %></span>
 
     <p><%= @review.content %></p>
+    <ul class='review-buttons'>
+      <li><%= link_to 'Edit Review', edit_film_review_path(@film, @review), class: 'button' %></li>
+      <li><%= link_to 'Delete Review', film_review_path(@film, @review), method: :delete, confirm: 'Are you sure?', class: 'button' %></li>
+    </ul>
   </div>
 
   <div id='review-comments-container'>
