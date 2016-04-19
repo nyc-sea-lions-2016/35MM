@@ -1,4 +1,5 @@
 <!-- to be centered -->
+
 <h1 class='film-title'><%= @film.title %></h1>
 
 <div id='film-show-container' class='row'>
@@ -7,6 +8,15 @@
   <%= image_tag('bergman-poster.jpg') %>
 <!-- Reviews will go here -->
     <h2 class='section-title'>Review</h2>
+    <div class='review-listing-container'>
+      <ul class='review-listing'>
+        <% @film.reviews.each do |review| %>
+        <li class='individual-review'>
+          <%= review.content %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 
   <div class='large-9 columns'>
@@ -14,12 +24,29 @@
       <h2>Synopsis</h2>
       <p><%= @film.summary %></p>
       <!-- Link to Create New Comment -> new_film_comment_path -->
-      <span class='button'><%= link_to 'Create a New Comment', '' %></span>
     </div>
+
+
+      <div class='new-comment-button'>
+        <li><%= link_to 'Create a New Comment', new_film_comment_path(@film), class: 'button' %></li>
+      </div>
+      <div class='create-new-comment-container'>
+      </div>
+
+
+    <div class='comment-listing-container'>
+      <ul class='comment-listing'>
+        <h2>Comment Section</h2>
+          <% @film.comments.each do |comment| %>
+        <li class='individual-comment'>
+          <p><%= comment.content %><p>
+        </li>
+          <% end %>
     <!-- Synopsis will go here -->
     <!-- Comment box will go here -->
     <!-- Comments index will go here -->
-  </div>
+      </ul>
+    </div>
 </div>
 
 

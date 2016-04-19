@@ -1,19 +1,35 @@
-h1, h2 {
+h1 {
   text-align: center;
 }
 
-/*h2 {
+h2 {
+  margin-bottom: 20px;
+}
+
+.new-comment-button {
+  width: 100%;
   text-align: center;
-}*/
+}
 
 #film-show-container {
   max-width: 90%;
 }
 
-.large-9 {
-  background-color: green;
+.comment-listing-container {
+  /*background-color: blue;*/
 }
 
 .large-3 {
-  background-color: yellow;
+  margin-top: 4%;
 }
+
+.large-9 {
+  /*background-color: green;*/
+  margin-top: 2%;
+  padding: 2% 4% 2% 4%;
+}
+
+.large-3 {
+  /*background-color: yellow;*/
+}
+
