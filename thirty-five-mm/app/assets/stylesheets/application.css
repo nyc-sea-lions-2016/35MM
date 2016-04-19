@@ -20,9 +20,8 @@ ul, li {
 }
 
 nav{
-  display: block;
+  display: none;
   position: absolute;
   height: 15%;
   width: 100%;
-  padding-bottom: ;
 }
