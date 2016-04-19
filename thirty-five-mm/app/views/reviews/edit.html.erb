@@ -1,0 +1,17 @@
+<h1 class='edit-review-header'>Edit a Review</h1>
+
+  <%= form_for [@film, @review] do |f| %>
+  <div class='row'>
+    <div class='medium-6 medium-centered columns'>
+      <%= f.label :content %>
+      <%= f.text_area :content, cols: '20', rows:'5' %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='medium-6 medium-centered columns'>
+      <%= f.submit 'Edit Review', class: 'button' %>
+    </div>
+  </div>
+<% end %>
+
