@@ -27,6 +27,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @film = Film.find(params[:film_id])
+    @comment = Comment.find(params[:id]).destroy
+    flash[:success] = "Comment successfully removed"
+    render @film #Fix this portion so that correct redirect occurs
   end
 
   private
