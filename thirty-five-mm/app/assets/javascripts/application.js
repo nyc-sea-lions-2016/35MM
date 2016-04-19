@@ -79,12 +79,20 @@ $(document).ready(function() {
       url: $(event.target).attr('action'),
       data: $(event.target).serialize()
     }).then(function(response) {
-    debugger
       $('.review-comment-listing').prepend(response);
       $('.create-new-review-comment-button').show();
     });
   });
 
+    $('.review-comment-listing').on('click', '.delete-comment-button', function(event) {
+      event.preventDefault();
+      $.ajax({
+        type: "post",
+        url: $(event.target).attr('href'),
+        data: { _method: "delete"}
+      });
+      $(event.target).closest('.individual-comment').hide();
+    });
 
 
 });

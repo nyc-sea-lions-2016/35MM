@@ -36,17 +36,6 @@ class CommentsController < ApplicationController
           render '_review_new_comment.html.erb', locals: { review: @review, comment: @comment}, layout: false
         end
     end
-      # @film = Film.find(params[:film_id])
-      # @comment = @film.comments.build(comments_params)
-      # #Change the following line once sessions/authentication is activated
-      # @comment.user_id = User.first.id
-      # if request.xhr? && @comment.save
-      #   flash[:success] = "Comment successfully created"
-      #   render '_comment.html.erb', locals: { film: @film, comment: @comment }, layout: false
-      # else
-      #   flash.now.alert = 'There was an issue with the creation of your comment'
-      #   render :new
-      # end
   end
 
   def edit
@@ -55,15 +44,23 @@ class CommentsController < ApplicationController
   def update
   end
 
-  def destroy
-    if request.xhr?
+def destroy
+  if params[:film_id]
       @film = Film.find(params[:film_id])
       @comment = Comment.find(params[:id])
       @comment.destroy
       flash[:success] = "Comment successfully removed"
-      render text:"ok" #Fix this portion so that correct redirect occurs
+      redirect_to film_path(@film)
+  else
+    if request.xhr?
+      @review = Review.find(params[:review_id])
+      @comment = Comment.find(params[:id])
+      @comment.destroy
+      flash[:success] = "Comment successfully removed"
+      redirect_to film_review_path(@review.film.id, @review)
     end
   end
+end
 
   private
 

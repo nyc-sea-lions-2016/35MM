@@ -27,7 +27,7 @@
       <% @review.comments.reverse.each do |comment| %>
         <li class='individual-comment'>
           <p><%= comment.content %></p>
-          <%= link_to 'Delete Comment', "/reviews/#{@review}/comments/#{comment.id}", class: 'button delete-comment-button' %>
+          <%= link_to 'Delete Comment', "/reviews/#{@review.id}/comments/#{comment.id}", method: :delete, class: 'button delete-comment-button' %>
         </li>
       <% end %>
       </ul>
