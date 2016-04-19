@@ -1,3 +1,10 @@
+
+#main-content {
+  /*position: fixed;*/
+  height: 100%;
+  width: 100%;
+}
+
 #bgvid {
     position: relative;
     display: block;
@@ -26,6 +33,75 @@
   top: 15%;
   height: 85%;
   width: 100%;
+  background-color: green;
+}
+
+#featured-films-container {
+  position: relative;
+  display: inline-block;
+  top: 10rem;
+  left: ;
+  height: 60%;
+  width: 80%;
+  background-color: red;
+}
+
+#main-feature{
+  position: relative;
+  display: block;
   background-color: blue;
 }
+
+#feature-2 {
+  position: relative;
+  display: block;
+  background-color: purple;
+}
+
+#feature-3 {
+  position: relative;
+  display: block;
+  background-color: yellow;
+}
+
+#feature-4 {
+  position: relative;
+  display: block;
+  background-color: gray;
+}
+
+#titles {
+  position: relative;
+  display: block;
+  background-color: orange;
+}
+
+#categories {
+  position: relative;
+  display: block;
+  background-color: aqua;
+}
+
+#column-1 {
+  position: relative;
+  display: block;
+  background-color: #ac7339;
+}
+
+#column-2 {
+  position: relative;
+  display: block;
+  background-color: #ac7339;
+}
+
+#column-3 {
+  position: relative;
+  display: block;
+  background-color: #ff0000;
+}
+
+
+
+
+
 
