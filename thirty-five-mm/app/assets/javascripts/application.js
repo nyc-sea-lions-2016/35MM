@@ -20,7 +20,7 @@ $(document).ready(function() {
   $(".button_to").on("submit", function(event){
     event.preventDefault();
     $("#bgvid").fadeOut(400)
-    $("body").css("position", "absolute");
+    $("#main-content").css("position", "absolute");
     $("#categories-index-container").show();
     // $("#categories-index-container").scrollTop(0);
     $("body").scrollTop(1000);
