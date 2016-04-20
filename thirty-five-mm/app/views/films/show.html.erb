@@ -8,6 +8,7 @@
   <%= image_tag('bergman-poster.jpg') %>
 <!-- Reviews will go here -->
     <h2 class='section-title'>Review</h2>
+    <li class='new-review-button'><%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %></li>
     <div class='review-listing-container'>
       <ul class='review-listing'>
         <% @film.reviews.each do |review| %>
