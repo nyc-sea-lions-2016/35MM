@@ -16,6 +16,6 @@ class Film < ActiveRecord::Base
   end
 
 	def no_of_stars
-    self.reviews.average('no_of_stars')
+    self.ratings.average('stars')
 	end
 end
