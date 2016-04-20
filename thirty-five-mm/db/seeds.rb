@@ -10,7 +10,8 @@ USERNAMES.each do |u|
   User.create(
     username: u[0],
     email: u[1],
-    password: "pw"
+    password: "pw",
+    password_encrypted: "pw"
     )
 end
 
