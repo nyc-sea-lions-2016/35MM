@@ -7,17 +7,19 @@
 <!-- Image Will go here -->
   <%= image_tag('bergman-poster.jpg') %>
 <!-- Reviews will go here -->
-    
-    <h2 class='section-title'>Review</h2>
-    <div class='new-review-button'><%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %></div>
-    <div class='review-listing-container'>
-      <ul class='review-listing'>
-        <% @film.reviews.each do |review| %>
-        <li class='individual-review'>
-          <%= review.content %>
-        </li>
-        <% end %>
-      </ul>
+    <div class='reviews-container'>
+      <h2 class='section-title'>Review</h2>
+      <div class='view-film-reviews-button'>
+      <%= link_to 'View Reviews', film_reviews_path(@film), class: 'button' %>
+      </div>
+      <div class='new-review-button'>
+        <%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %>
+      </div>
+      <div class='review-listing-container'>
+        <div class='featured-review'>
+            <%= @film.reviews.first.content %>
+        </div>
+      </div>
     </div>
   </div>
 

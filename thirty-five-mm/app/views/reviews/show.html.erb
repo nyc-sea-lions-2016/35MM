@@ -26,9 +26,6 @@
 
       <div id='review-comments-container'>
         <h2 class='comment-section-header'>Comments</h2>
-        <% if @review.no_comments? %>
-          <h3>No comments to display</h3>
-        <% end %>
           <ul class='review-comment-listing'>
           <% @review.comments.reverse.each do |comment| %>
             <li class='individual-comment'>
