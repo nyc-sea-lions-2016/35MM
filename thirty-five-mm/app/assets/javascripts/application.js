@@ -36,7 +36,7 @@ $(document).ready(function() {
       method: 'GET',
       url: $(event.target).attr('href')
     }).then(function(response) {
-      $(event.target).hide();
+      $('.new-comment-button').hide();
       $('.create-new-comment-container').append(response);
     });
   });
@@ -51,7 +51,7 @@ $(document).ready(function() {
       data: $(event.target).serialize()
     }).then(function(response) {
       $(event.target).hide();
-      $('.new-comment-header').hide();
+      $('.create-new-comment-container').hide();
       $('.new-comment-button').show();
       $('.comment-listing').append(response);
     });
@@ -107,24 +107,31 @@ $(document).ready(function() {
       $(event.target).closest('.individual-comment').hide();
     });
 
+    // add new film review
 
-    $('.new-review-button').on('click', function(event){
-      event.preventDefault();
-        $(event.target).hide();
-      $.ajax({
-        url: $(event.target).attr('href')
-      }).then(function(response){
-        $('.section-title').append(response);
-      })
-    })
 
-    $('.section-title').on('submit', 'review-form-container', function(event){
-      event.preventDefault();
-      debugger
-      $('.review-form-container').hide();
-    })
+    // $('.new-review-button').on('click', function(event){
+    //   event.preventDefault();
+    //   $('.new-review-button').hide();
+    //   $.ajax({
+    //     url: $(event.target).attr('href')
+    //   }).then(function(response){
+    //     $('.section-title').append(response);
+    //   })
+    // })
 
-    // left off here
+    // $('.reviews-container').on('submit', '#new_review', function(event){
+    //   event.preventDefault();
+    //   $('.review-form-container').hide();
+    //   $.ajax({
+    //     method: 'POST',
+    //     url: $(event.target).attr('action'),
+    //     data: $(event.target).serialize()
+    //   }).then(function(response){
+    //     debugger
+    //   })
+    // })
+
 
 
     //Change Opacity of Navbar on Mouse Over

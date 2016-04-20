@@ -6,26 +6,52 @@
   <div class='large-3 columns'>
 <!-- Image Will go here -->
   <%= image_tag('bergman-poster.jpg') %>
-<!-- Reviews will go here -->
+
+<!-- Ratings go here -->
     <h2>Score</h2>
-    <!-- Gave up here... -->
-<!--       <div id="star-rating">
-        <% if @film.no_of_stars.blank? %>
-          <%= link_to 'Please add a Review',{ controller: 'reviews', action: 'new', id: @film.id } %>
-        <% else %>
-          Star rating: <%= render_stars(@film.no_of_stars) %>
+      <div id="star-rating">
+        <!-- How do I get star rating font to be white? -->
+        <h4 class='star-rating-text'>Star rating:</h4> <%= render_stars(@film.no_of_stars) %>
+        <% if logged_in? %>
+
+          <% unless @film.has_been_rated?(current_user.id) %>
+
+          <h5>Add a Rating:</h5>
+            <div id='rating_form_div'>
+            <%= form_for @rating, url: film_ratings_path(@film) do |f| %>
+              <%= f.label :stars %>
+
+              <%= f.radio_button(:stars, "1") %>
+              <%= f.label(:stars, "1") %>
+              <%= f.radio_button(:stars, "2") %>
+              <%= f.label(:stars, "2") %>
+              <%= f.radio_button(:stars, "3") %>
+              <%= f.label(:stars, "3") %>
+              <%= f.radio_button(:stars, "4") %>
+              <%= f.label(:stars, "4") %>
+              <%= f.radio_button(:stars, "5") %>
+              <%= f.label(:stars, "5") %>
+              <%= f.submit "Rate me!" %>
+            <% end %>
+          </div>
+          <% end %>
         <% end %>
-       </div>  -->
-    <h2 class='section-title'>Review</h2>
-    <li class='new-review-button'><%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %></li>
-    <div class='review-listing-container'>
-      <ul class='review-listing'>
-        <% @film.reviews.each do |review| %>
-        <li class='individual-review'>
-          <%= review.content %>
-        </li>
-        <% end %>
-      </ul>
+      </div>
+
+<!-- Reviews will go here -->
+    <div class='reviews-container'>
+      <h2 class='section-title'>Review</h2>
+      <div class='view-film-reviews-button'>
+      <%= link_to 'View Reviews', film_reviews_path(@film), class: 'button' %>
+      </div>
+      <div class='new-review-button'>
+        <%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %>
+      </div>
+      <div class='review-listing-container'>
+        <div class='featured-review'>
+            <%= @film.reviews.first.content %>
+        </div>
+      </div>
     </div>
   </div>
 

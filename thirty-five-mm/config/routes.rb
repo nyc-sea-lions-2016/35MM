@@ -24,13 +24,16 @@ Rails.application.routes.draw do
   resources :films, except: [:index] do
     resources :reviews
     resources :comments, except: [:show]
+    resources :ratings, except: [:index, :new, :show]
     get 'search', on: :collection
   end
 
   resources :reviews, only: [] do
     resources :comments, except: [:show]
+    resources :ratings, except: [:index, :new, :show]
   end
 
   resources :products
+
 
 end
