@@ -20,7 +20,7 @@ body {
 
 h2 {
   font-family: 'Fjalla One', sans-serif;
-  font-size: 5em;
+  font-size: 4.6em;
   color: #FFFFFF;
 }
 
@@ -87,6 +87,9 @@ ul, li {
   height: 110px;
 }
 
+.top-bar a {
+  color: black;
+}
 .top-bar ul {
   background-color: #FFFFFF;
 }
