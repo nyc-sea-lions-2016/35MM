@@ -6,6 +6,7 @@
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -13,7 +14,7 @@
 <nav class='top-bar' data-topbar role='navigation'>
   <ul class='title-area'>
     <li class='name'>
-      <h1>35 MM</h1>
+      <h1 id='navbar-logo'>35 MM</h1>
     </li>
   </ul>
 
@@ -21,8 +22,9 @@
     <ul class='right'>
     <% if logged_in? %>
       <!-- Placeholder... these options will be reserved for trustworthy reviewers -->
-      <li><%= link_to 'Log In', login_path %></li>
-      <li><%= link_to 'Sign Up', new_user_path %></li>
+    <% else %>
+       <li><%= link_to 'Log In', login_path %></li>
+       <li><%= link_to 'Sign Up', new_user_path %></li>
     <% end %>
   </ul>
 

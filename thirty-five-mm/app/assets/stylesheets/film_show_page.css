@@ -11,8 +11,8 @@ h2 {
   text-align: center;
 }
 
-#film-show-container {
-  max-width: 90%;
+#wrapper {
+  max-width: 120%;
 }
 
 .comment-listing-container {

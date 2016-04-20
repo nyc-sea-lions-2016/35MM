@@ -14,14 +14,79 @@
  *= require_self
  */
 
+body {
+  background-color: #000000
+}
+
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 5em;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #FFFFFF;
+}
+
+span {
+  color: #FFFFFF;
+}
+
+p {
+  margin-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
 ul, li {
   list-style: none;
   display: inline;
 }
 
-nav{
-  display: none;
-  position: absolute;
-  height: 15%;
-  width: 100%;
+.title-area h1 {
+  font-size: 62px;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+}
+
+.right {
+  float: right;
+  display: inline;
+  position: relative;
+  bottom: 40px;
+  background-color: #FFFFFF;
+}
+
+.right li {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 18px;
+  margin-right: 24px;
+  background-color: #FFFFFF;
+}
+
+.right li a {
+  font-size: 32px;
+  color: black;
+  position: relative;
+  bottom: 12px;
+}
+
+#navbar-logo {
+  font-family: 'Fjalla One', sans-serif;
+  text-align: left;
+  display: inline;
+  position: relative;
+  top: 12px;
+}
+
+.top-bar {
+  background-color: #FFFFFF;
+  margin-bottom: 4%;
+  height: 110px;
+}
+
+.top-bar ul {
+  background-color: #FFFFFF;
 }
