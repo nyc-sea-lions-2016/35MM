@@ -36,7 +36,7 @@ $(document).ready(function() {
       method: 'GET',
       url: $(event.target).attr('href')
     }).then(function(response) {
-      $(event.target).hide();
+      $('.new-comment-button').hide();
       $('.create-new-comment-container').append(response);
     });
   });
@@ -51,7 +51,7 @@ $(document).ready(function() {
       data: $(event.target).serialize()
     }).then(function(response) {
       $(event.target).hide();
-      $('.new-comment-header').hide();
+      $('.create-new-comment-container').hide();
       $('.new-comment-button').show();
       $('.comment-listing').append(response);
     });
@@ -110,7 +110,7 @@ $(document).ready(function() {
 
     $('.new-review-button').on('click', function(event){
       event.preventDefault();
-        $(event.target).hide();
+      $('.new-review-button').hide();
       $.ajax({
         url: $(event.target).attr('href')
       }).then(function(response){
@@ -120,7 +120,6 @@ $(document).ready(function() {
 
     $('.section-title').on('submit', 'review-form-container', function(event){
       event.preventDefault();
-      debugger
       $('.review-form-container').hide();
     })
 
