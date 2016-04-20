@@ -14,7 +14,7 @@
         <!-- Need to add review title to models/migrations - placeholder for now -->
         <h3 class='review-author'>By <%= @review.user.username %></h3>
         <div class='review-info'>
-          <span><%= @review.created_at.strftime('%F') %> |</span>
+          <span><%= @review.created_at.strftime('%F') %>|</span>
           <span><%= @review.content.length %> Characters</span>
         </div>
         <p><%= @review.content %></p>

@@ -45,3 +45,48 @@ ul, li {
   display: inline;
 }
 
+.title-area h1 {
+  font-size: 62px;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+}
+
+.right {
+  float: right;
+  display: inline;
+  position: relative;
+  bottom: 40px;
+  background-color: #FFFFFF;
+}
+
+.right li {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 18px;
+  margin-right: 24px;
+  background-color: #FFFFFF;
+}
+
+.right li a {
+  font-size: 32px;
+  color: black;
+}
+
+#navbar-logo {
+  font-family: 'Fjalla One', sans-serif;
+  text-align: left;
+  display: inline;
+  position: relative;
+  top: 22px;
+}
+
+.top-bar {
+  background-color: #FFFFFF;
+  margin-bottom: 4%
+}
+
+.top-bar ul {
+  background-color: #FFFFFF;
+}
+
+
+
