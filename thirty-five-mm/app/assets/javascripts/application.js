@@ -108,9 +108,12 @@ $(document).ready(function() {
 
     //Change Opacity of Navbar on Mouse Over
 
-    $('.top-bar').hover(function) {
+    $('.top-bar').css('opacity', 0.5);
 
-    }
-
+    $('.top-bar').hover(function() {
+      $(this).animate({opacity: 1.0}, 500);
+    }, function(event) {
+      $(this).animate({opacity: 0.5}, 500);
+    });
 
 });
