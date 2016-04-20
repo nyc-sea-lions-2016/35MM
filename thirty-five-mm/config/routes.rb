@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :users, except: [:destroy, :index]
 
-  # root 'categories#index'
+  root 'categories#index'
 
   resources :films, except: [:index] do
     resources :reviews
@@ -22,6 +22,5 @@ Rails.application.routes.draw do
   end
 
   resources :products
-  root 'products#index'
 
 end

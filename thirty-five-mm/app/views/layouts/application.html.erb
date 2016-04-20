@@ -18,6 +18,15 @@
     </li>
   </ul>
 
+
+    <div id="flash_messages">
+      <% if flash.any? %>
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, :class => "flash #{key}") %>
+        <% end %>
+      <% end %>
+    </div>
+
   <section class='top-bar-section'>
     <ul class='right'>
     <% if logged_in? %>
