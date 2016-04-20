@@ -3,10 +3,21 @@
     <%=video_tag('shrunk.webm', autoplay: true, loop: true, id: 'bgvid')%>
 
     <%= button_to "index", "", :id => "scroll-down-button" %>
+
   </div>
 
   <div id="categories-index-container">
-
+  <div id="search-form-container">
+    <%= form_tag search_films_path, method: :get, id:'search-form' do %>
+      <p>
+        <%= label_tag :search, "Search Films" %>
+        <%= text_field_tag :search, params[:search], options = {style:"height:40px;border-radius:25px;", placeholder:"search"} %>
+      </p>
+      <p>
+        <%= submit_tag 'Search', name: nil %>
+      </p>
+    <% end %>
+  </div>
     <div id="featured-films-container" >
       <div id="main-feature" ></div>
         <div id="feature-2" ></div>

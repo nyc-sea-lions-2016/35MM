@@ -1,0 +1,7 @@
+<div id='search results container'>
+	<% @films.each_with_index do |film, index| %>
+		<div class='search result' id="<%= index %>">
+			<a href="<%=film.id%>"> <%= film.title %> </a>
+		</div>
+	<% end %>
+</div>
