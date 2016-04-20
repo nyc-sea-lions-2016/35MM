@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
       @comment.user_id = User.first.id
         if request.xhr? && @comment.save
           flash[:success] = "Comment successfully saved"
-          render '_film_comment.html.erb'
+          render '_film_comment.html.erb', locals: {film: @film, comment: @comment}, layout: false
         else
           flash.now.alert = "There was an issue with the creation of your comment"
           render '_film_new_comment.html.erb'
