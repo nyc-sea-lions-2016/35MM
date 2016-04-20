@@ -6,7 +6,7 @@
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <!-- <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed' rel='stylesheet' type='text/css'> -->
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Condensed' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -21,7 +21,8 @@
   <section class='top-bar-section'>
     <ul class='right'>
     <% if logged_in? %>
-      <!-- Placeholder... these options will be reserved for trustworthy reviewers -->
+      <li><%= link_to'Logout', logout_path, method: :delete %></li>
+      <li><%= link_to'Profile', user_path(current_user) %></li>
     <% else %>
        <li><%= link_to 'Log In', login_path %></li>
        <li><%= link_to 'Sign Up', new_user_path %></li>
@@ -29,9 +30,6 @@
   </ul>
 
     <ul class='left'>
-      <% if logged_in? %>
-        <li><%= link_to 'Categories Index', categories_path %></li>
-      <% end %>
     </ul>
   </section>
 </nav>
