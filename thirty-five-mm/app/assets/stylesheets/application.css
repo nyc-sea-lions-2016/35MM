@@ -96,6 +96,10 @@ ul, li {
 .top-bar a {
   color: black;
 }
+
+.top-bar a:hover {
+  color: #D3D3D3;
+}
 .top-bar ul {
   background-color: #FFFFFF;
 }
