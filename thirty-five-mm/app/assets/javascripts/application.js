@@ -107,6 +107,7 @@ $(document).ready(function() {
       $(event.target).closest('.individual-comment').hide();
     });
 
+
     $('.new-review-button').on('click', function(event){
       event.preventDefault();
         $(event.target).hide();
@@ -124,6 +125,17 @@ $(document).ready(function() {
     })
 
     // left off here
+
+
+    //Change Opacity of Navbar on Mouse Over
+
+    $('.top-bar').css('opacity', 0.5);
+
+    $('.top-bar').hover(function() {
+      $(this).animate({opacity: 1.0}, 500);
+    }, function(event) {
+      $(this).animate({opacity: 0.5}, 500);
+    });
 
 
 });

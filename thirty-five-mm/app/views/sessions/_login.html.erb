@@ -1,0 +1,21 @@
+<%= form_for :sessions, url: login_path do |f| %>
+  <div class='row'>
+    <div class='medium-6 medium-centered columns'>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='medium-6 medium-centered columns'>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='medium-6 medium-centered columns'>
+      <%= f.submit 'Login to Account', class: 'button' %>
+    </div>
+  </div>
+<% end %>
