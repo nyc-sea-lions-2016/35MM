@@ -15,17 +15,17 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $("#categories-index-container").hide();
+  // $("#categories-index-container").hide();
 
-  $(".button_to").on("submit", function(event){
+  // $(".button_to").on("submit", function(event){
     event.preventDefault();
     $("#bgvid").css("position", "absolute")
     $("#bgvid").fadeOut(400)
     $("#main-content").css("position", "absolute");
     $("#categories-index-container").show();
     // $("#categories-index-container").scrollTop(0);
-    $("body").scrollTop(1000);
-  });
+    $("main-content").scrollTop(1000);
+  // });
 
 
   //New Comment for a Film - GET
@@ -52,6 +52,7 @@ $(document).ready(function() {
     }).then(function(response) {
       $(event.target).hide();
       $('.new-comment-header').hide();
+      $('.new-comment-button').show();
       $('.comment-listing').append(response);
     });
   });
@@ -106,6 +107,26 @@ $(document).ready(function() {
       $(event.target).closest('.individual-comment').hide();
     });
 
+
+    $('.new-review-button').on('click', function(event){
+      event.preventDefault();
+        $(event.target).hide();
+      $.ajax({
+        url: $(event.target).attr('href')
+      }).then(function(response){
+        $('.section-title').append(response);
+      })
+    })
+
+    $('.section-title').on('submit', 'review-form-container', function(event){
+      event.preventDefault();
+      debugger
+      $('.review-form-container').hide();
+    })
+
+    // left off here
+
+
     //Change Opacity of Navbar on Mouse Over
 
     $('.top-bar').css('opacity', 0.5);
@@ -115,5 +136,6 @@ $(document).ready(function() {
     }, function(event) {
       $(this).animate({opacity: 0.5}, 500);
     });
+
 
 });

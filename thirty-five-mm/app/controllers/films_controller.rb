@@ -25,6 +25,14 @@ class FilmsController < ApplicationController
   def destroy
   end
 
+  def search
+    @films = Film.search(params[:search])
+    if @films
+    else
+      # Indicate no results, don't load blank page
+    end
+  end
+
   private
 
   def film_params

@@ -6,18 +6,19 @@
   def new
     @film = Film.find(params[:film_id])
     @review = Review.new
-    render 'new', locals: { film: @film, review: @review }, layout: false
+    render '_new.html.erb', locals: { film: @film, review: @review }, layout: false
   end
 
   def create
     @film = Film.find(params[:film_id])
     @review = @film.reviews.build(reviews_params)
-    #Change the following line once sessions/authentication is activated
     @review.user_id = User.first.id
-    if @review.save
-      flash[:success] = "Review successfully created"
+    if request.xhr? && @review.save
+      flash[:success] = "Review successfully saved"
+      render '_new.html.erb', locals: {film: @film, review: @review}, layout: false
     else
-      #Discuss whether the create method for reviews should be AJAXified or not
+      flash.now.alert = "There was an issue with the creation of your review"
+      render '_new.html.erb'
     end
   end
 

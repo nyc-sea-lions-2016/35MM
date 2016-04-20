@@ -4,6 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.boolean :trusted, default: false
       t.string :username, null: false, unique: true
       t.string :email, null: false, unique: true
+      t.string :pic_url
       t.string :password_digest
 
       t.timestamps null: false
