@@ -1,0 +1,16 @@
+.registration-header {
+  font-family: 'Fjalla One', sans-serif;
+  color: #FFFFFF;
+  font-size: 72px;
+}
+
+.registration-label {
+  color: #FFFFFF;
+}
+
+label {
+  font-family: 'Roboto Condensed';
+  font-size: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}

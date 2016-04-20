@@ -1,0 +1,40 @@
+<h1 class='registration-header'>Register</h1>
+
+<%= form_for @user, html:{ id:'new-user-form' } do |f| %>
+  <fieldset>
+    <legend>Register</legend>
+
+    <% if @user.errors.any?  %>
+      <%=  @errors.each do | f| %>
+        <%= f %>
+      <% end %>
+    <% end %>
+
+    <div class='row'>
+      <div class='medium-6 medium-centered columns'>
+        <%= label_tag :email %>
+        <%= text_field_tag :email, params[:email], :size => '20' %>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='medium-6 medium-centered columns'>
+        <%= label_tag :username %>
+        <%= text_field_tag :username, params[:username] %>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='medium-6 medium-centered columns'>
+        <%= label_tag :password %>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='medium-6 medium-centered columns'>
+        <%= submit_tag "Register", class: 'button' %>
+      </div>
+    </div>
+  </fieldset>
+<% end %>

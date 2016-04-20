@@ -1,0 +1,52 @@
+#jumbotron-image {
+  width: 100%;
+}
+
+.review-column {
+  padding-left: 1%;
+}
+
+.review-title {
+  text-align: center;
+}
+
+.review-author {
+  text-align: center;
+}
+
+.review-info {
+  text-align: center;
+}
+
+#review-container {
+  max-width: 100%
+}
+
+.review-comment-label {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #FFFFFF;
+  font-size: 24px;
+  text-align: center;
+}
+
+#review-comments-container {
+  margin-top: 4%;
+  margin-left: 4%;
+  margin-bottom: 4%;
+  width: 90%;
+  border-radius: 5px;
+  background-color: gray;
+  padding-top: 2%;
+  padding-left: 6%;
+}
+
+.new-comment-header {
+  font-family: 'Fjalla One', sans-serif;
+  color: #FFFFFF;
+  font-size: 58px;
+}
+
+.content-column {
+  background-color: yellow;
+}
+
