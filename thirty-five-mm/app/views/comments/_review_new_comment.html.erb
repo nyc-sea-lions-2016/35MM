@@ -1,9 +1,9 @@
-<h1 class='new-comment-header'>Create New Review Comment</h1>
+<h1>Create New Review Comment</h1>
 
   <%= form_for [@review, @comment] do |f| %>
   <div class='row'>
     <div class='medium-6 medium-centered columns'>
-      <%= f.label :content %>
+      <%= f.label :content, class: 'review-comment-label' %>
       <%= f.text_field :content %>
     </div>
   </div>
