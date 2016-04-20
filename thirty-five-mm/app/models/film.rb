@@ -14,4 +14,8 @@ class Film < ActiveRecord::Base
   		Film.all
   	end
   end
+
+	def no_of_stars
+    self.reviews.average('no_of_stars')
+	end
 end
