@@ -69,6 +69,8 @@ ul, li {
 .right li a {
   font-size: 32px;
   color: black;
+  position: relative;
+  bottom: 12px;
 }
 
 #navbar-logo {
@@ -76,12 +78,13 @@ ul, li {
   text-align: left;
   display: inline;
   position: relative;
-  top: 22px;
+  top: 12px;
 }
 
 .top-bar {
   background-color: #FFFFFF;
-  margin-bottom: 4%
+  margin-bottom: 4%;
+  height: 110px;
 }
 
 .top-bar ul {
