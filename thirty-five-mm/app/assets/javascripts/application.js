@@ -106,5 +106,11 @@ $(document).ready(function() {
       $(event.target).closest('.individual-comment').hide();
     });
 
+    //Change Opacity of Navbar on Mouse Over
+
+    $('.top-bar').hover(function) {
+
+    }
+
 
 });
