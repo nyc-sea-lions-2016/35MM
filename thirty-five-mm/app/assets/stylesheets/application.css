@@ -103,3 +103,7 @@ ul, li {
 .top-bar ul {
   background-color: #FFFFFF;
 }
+
+.comment-section-header {
+  font-size: 60px;
+}

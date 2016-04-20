@@ -33,7 +33,6 @@
     <div class='synopsis-container'>
       <h2>Synopsis</h2>
       <p><%= @film.summary %></p>
-      <!-- Link to Create New Comment -> new_film_comment_path -->
     </div>
 
 
@@ -46,7 +45,7 @@
 
     <div class='comment-listing-container'>
       <ul class='comment-listing'>
-        <h2>Comment Section</h2>
+        <h2 class='comment-section-header'>Comment Section</h2>
           <% @film.comments.each do |comment| %>
         <li class='individual-comment'>
           <p><%= comment.content %><p>
