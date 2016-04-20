@@ -19,19 +19,44 @@
     <% end %>
   </div>
     <div id="featured-films-container" >
-      <div id="main-feature" ></div>
-        <div id="feature-2" ></div>
-        <div id="feature-3" ></div>
-        <div id="feature-4" ></div>
-        <div id="titles" ></div>
+      <div id="main-feature" >
+
+      <%=video_tag('Gallows_trailer.webm', autoplay: true, loop: true, controls: true, id: 'main-feature-video')%>
+      <%= link_to 'Elevator to the Gallows', '#', id: 'main-feature-link' %>
+      <p></p>
+      <p></p>
+      </div>
+        <div id="feature-2" >
+          <p>feature 2</p>
+
+        </div>
+        <div id="feature-3" >
+          <p>feature 3</p>
+        </div>
+        <div id="feature-4" >
+          <p>feature 4</p>
+        </div>
+        <div id="titles" >
+          <% @films.each do |f| %>
+            <%= link_to "#{f.title}", film_path(f) %>
+            <br>
+          <% end %>
+        </div>
+
+        </div>
       </div>
 
-      <div id="categories" >
-        <div id="column-1" ></div>
-        <div id="column-2" ></div>
-        <div id="column-3" ></div>
-      </div>
-      </div
+      <!-- <div id="column-container">
+        <div id="column-1" >
+          <p>column 1</p>
+        </div>
+        <div id="column-2" >
+          <p>column 2</p>
+        </div>
+        <div id="column-3" >
+          <p>column 3</p>
+        </div>
+      </div> -->
   </div>
 </div>
 
