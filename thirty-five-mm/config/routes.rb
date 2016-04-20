@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :films, except: [:index] do
     resources :reviews
     resources :comments, except: [:show]
+    get 'search', on: :collection
   end
 
   resources :reviews, only: [] do
