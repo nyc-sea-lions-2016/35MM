@@ -29,7 +29,7 @@
 }
 
 #main-feature {
-  
+
 }
 
 #scroll-down-button{
@@ -139,6 +139,16 @@
 
   height: 50%;
   width: 30%;
+}
+
+.categories-index-film {
+  font-size: 18px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#search-films-label {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 58px;
 }
 
 
