@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
 
+  # devise_for :users
+  # Rails.application.routes.draw do
+  # devise_for :users
+    devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
+    resources :products
+  # end
+
+  # devise_for :user
+
   resources :products
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  delete '/logout' => 'sessions#destroy'
+  # resources :sessions
+  # get '/login' => 'sessions#new'
+  # post '/login' => 'sessions#create'
+  # delete '/logout' => 'sessions#destroy'
 
   resources :categories
 
