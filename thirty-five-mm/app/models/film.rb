@@ -18,4 +18,8 @@ class Film < ActiveRecord::Base
 	def no_of_stars
     self.ratings.average('stars')
 	end
+
+  def has_been_rated?(current_user_id)
+    self.ratings.find_by(user_id: current_user_id)
+  end
 end

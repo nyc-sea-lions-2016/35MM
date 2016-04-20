@@ -14,6 +14,7 @@ class FilmsController < ApplicationController
 
   def show
     @film = Film.find(params[:id])
+    @rating = Rating.new
   end
 
   def edit
