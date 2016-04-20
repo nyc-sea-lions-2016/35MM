@@ -1,0 +1,28 @@
+<div id="user-show-container">
+  <h1 id="user-name-h1"> <%= @user.username %> </h1>
+  <%= image_tag("Oscar1", :id => "user-profile-pic") %>
+  <div id="user-stats">
+    <p>member since: <%= @user.created_at %></p>
+    <p>total reviews: <%= @user.review_count %></p>
+    <p>total comments: <%= @user.comment_count %></p>
+  </div>
+
+  <div id="user-reviews-section">
+    <h3>reviews</h3>
+    <% @user.reviews.each do |rev| %>
+      <%= rev.film.title %>
+      <br>
+      <%= rev.content %>
+    <% end %>
+  </div>  
+
+  <br>
+
+  <div id="user-comments-section">
+    <h3>comments</h3>
+    <% @user.comments.each do |com| %>
+      <%= com.content %>
+    <% end %>
+  </div> 
+
+</div>
