@@ -1,21 +1,23 @@
   class ReviewsController < ApplicationController
 
   def index
+    @film = Film.find(params[:film_id])
+    render 'reviews/index.html.erb'
   end
 
   def new
     @film = Film.find(params[:film_id])
     @review = Review.new
-    render '_new.html.erb', locals: { film: @film, review: @review }, layout: false
+    render '_new.html.erb'
   end
 
   def create
     @film = Film.find(params[:film_id])
     @review = @film.reviews.build(reviews_params)
     @review.user_id = User.first.id
-    if request.xhr? && @review.save
+    if @review.save
       flash[:success] = "Review successfully saved"
-      render '_new.html.erb', locals: {film: @film, review: @review}, layout: false
+      render 'reviews/show.html.erb'
     else
       flash.now.alert = "There was an issue with the creation of your review"
       render '_new.html.erb'
@@ -25,6 +27,7 @@
   def show
     @film = Film.find(params[:film_id])
     @review = Review.find(params[:id])
+    render :show
   end
 
   def edit

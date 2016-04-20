@@ -12,3 +12,6 @@
 !/log/.keep
 .DS_Store
 /tmp
+
+# Ignore notes
+notes.md

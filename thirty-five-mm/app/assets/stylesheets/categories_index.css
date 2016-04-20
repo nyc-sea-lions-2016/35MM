@@ -1,14 +1,22 @@
-
 #main-content {
-  /*position: fixed;*/
+  position: fixed;
   height: 100%;
   width: 100%;
+}
+#main-content a {
+  color: white;
+}
+
+#main-feature-link {
+  color: white;
+  top: 0;
 }
 
 #bgvid {
     position: relative;
     display: block;
-    top: 42.4rem;
+    padding-top: 1rem;
+    top: 18.6rem;
     left: 50%;
     width: 100%;
     height: 100%;
@@ -20,84 +28,127 @@
     background-size: cover;
 }
 
+#main-feature {
+
+}
+
 #scroll-down-button{
   display: inline-block;
   position: absolute;
-  bottom: 0;
+  top: 60%;
+  left: 45%;
   margin: auto;
 }
 
 #categories-index-container {
   position: relative;
   display: block;
-  top: 15%;
-  height: 85%;
+  top: 0%;
+  height: 100%;
   width: 100%;
-  background-color: green;
 }
 
 #featured-films-container {
   position: relative;
   display: inline-block;
-  top: 10rem;
-  left: ;
-  height: 60%;
-  width: 80%;
-  background-color: red;
+  top: 2rem;
+  left: 4rem;
+  height: 93%;
+  width: 90%;
+
 }
 
 #main-feature{
-  position: relative;
-  display: block;
-  background-color: blue;
+  position: absolute;
+  display: inline-block;
+  height: 65%;
+  width: 75%;
+
 }
 
 #feature-2 {
-  position: relative;
-  display: block;
-  background-color: purple;
+  position: absolute;
+  display: inline-block;
+  height:35%;
+  width:25%;
+  bottom: 0;
+  left: 0;
 }
 
 #feature-3 {
-  position: relative;
-  display: block;
-  background-color: yellow;
+  position: absolute;
+  display: inline-block;
+  height:35%;
+  width:25%;
+  bottom: 0rem;
+  left: 25%;
 }
 
 #feature-4 {
-  position: relative;
-  display: block;
-  background-color: gray;
+  position: absolute;
+  display: inline-block;
+  height:35%;
+  width:25%;
+  bottom: 0rem;
+  left: 50%;
 }
 
 #titles {
-  position: relative;
-  display: block;
-  background-color: orange;
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 25%;
+  right: 0;
+  top: 0;
 }
 
-#categories {
-  position: relative;
-  display: block;
-  background-color: aqua;
+#column-container {
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  padding-top: 2rem;
 }
 
 #column-1 {
-  position: relative;
-  display: block;
+  position: absolute;
+  display: inline-block;
   background-color: #ac7339;
+  bottom: 0rem;
+  left: 5%;
+  height: 50%;
+  width: 30%;
 }
 
 #column-2 {
-  position: relative;
-  display: block;
-  background-color: #ac7339;
+  position: absolute;
+  display: inline-block;
+  background-color: blue;
+  bottom: 0rem;
+  height: 50%;
+  width: 30%;
+  left: 5%;
 }
 
 #column-3 {
-  position: relative;
-  display: block;
+  position: absolute;
+  display: inline-block;
   background-color: #ff0000;
+  bottom: 0rem;
+
+  height: 50%;
+  width: 30%;
+}
+
+.categories-index-film {
+  font-size: 18px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#search-films-label {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 58px;
 }
 
 

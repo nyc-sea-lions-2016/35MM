@@ -1,5 +1,4 @@
-<h1>Create New Review Comment</h1>
-
+<div class='review-comment-form'>
   <%= form_for [@review, @comment] do |f| %>
   <div class='row'>
     <div class='medium-6 medium-centered columns'>
@@ -13,4 +12,5 @@
       <%= f.submit 'Create Comment', class: 'button' %>
     </div>
   </div>
-<% end %>
+  <% end %>
+</div>

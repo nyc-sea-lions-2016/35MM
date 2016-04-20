@@ -39,16 +39,19 @@
       </div>
 
 <!-- Reviews will go here -->
-    <h2 class='section-title'>Review</h2>
-    <li class='new-review-button'><%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %></li>
-    <div class='review-listing-container'>
-      <ul class='review-listing'>
-        <% @film.reviews.each do |review| %>
-        <li class='individual-review'>
-          <%= review.content %>
-        </li>
-        <% end %>
-      </ul>
+    <div class='reviews-container'>
+      <h2 class='section-title'>Review</h2>
+      <div class='view-film-reviews-button'>
+      <%= link_to 'View Reviews', film_reviews_path(@film), class: 'button' %>
+      </div>
+      <div class='new-review-button'>
+        <%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %>
+      </div>
+      <div class='review-listing-container'>
+        <div class='featured-review'>
+            <%= @film.reviews.first.content %>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -56,7 +59,6 @@
     <div class='synopsis-container'>
       <h2>Synopsis</h2>
       <p><%= @film.summary %></p>
-      <!-- Link to Create New Comment -> new_film_comment_path -->
     </div>
 
 
@@ -69,7 +71,7 @@
 
     <div class='comment-listing-container'>
       <ul class='comment-listing'>
-        <h2>Comment Section</h2>
+        <h2 class='comment-section-header'>Comment Section</h2>
           <% @film.comments.each do |comment| %>
         <li class='individual-comment'>
           <p><%= comment.content %><p>
