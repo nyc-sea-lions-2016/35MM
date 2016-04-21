@@ -14,9 +14,9 @@
 
   <div class='row'>
     <div id='film-container' class='medium-8 column'>
-      <h3 class='category-section-header'>
       <%=video_tag('Gallows_trailer.webm', autoplay: true, loop: true, controls: true, id: 'main-feature-video')%>
-
+        <h3 class='category-section-header'>The Gallows</h3>
+        <p>
       <h3 id='categories-index-header' class='category-section-header'>Categories</h3>
       <ul id='category-film-list'>
         <% @categories.each do |category| %>
