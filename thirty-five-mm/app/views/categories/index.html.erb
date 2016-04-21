@@ -1,58 +1,38 @@
-<div id="main-content" >
 
-  <div id="categories-index-container">
-  <div id="search-form-container">
-    <%= form_tag search_films_path, method: :get, id:'search-form' do %>
-      <p>
-        <%= label_tag :search, "Search Films", id: 'search-films-label' %>
-        <%= text_field_tag :search, params[:search], options = {style:"height:40px;border-radius:25px;", placeholder:"search"} %>
-      </p>
-      <p>
-        <%= submit_tag 'Search', name: nil, class: 'button' %>
-      </p>
-    <% end %>
+  <div id='searchbar-wrapper' class='row'>
+    <div class='medium-12 column'>
+      <%= form_tag search_films_path, method: :get, id:'search-form' do %>
+
+          <%= label_tag :search, "Search Films", id: 'search-films-label' %>
+          <%= text_field_tag :search, params[:search], options = {style:"height:40px;border-radius:25px;", placeholder:"search"} %>
+
+          <%= submit_tag 'Search', name: nil, class: 'button' %>
+
+      <% end %>
+    </div>
   </div>
-    <div id="featured-films-container" >
-      <div id="main-feature" >
 
+  <div class='row'>
+    <div id='film-container' class='medium-8 column'>
+      <h3 class='category-section-header'>
       <%=video_tag('Gallows_trailer.webm', autoplay: true, loop: true, controls: true, id: 'main-feature-video')%>
-      <%= link_to 'Elevator to the Gallows', '#', id: 'main-feature-link' %>
-      <p></p>
-      <p></p>
+
+      <h3 id='categories-index-header' class='category-section-header'>Categories</h3>
+
+    </div>
+
+      <div id='film-listing-sidebar' class='medium-4 column'>
+      <h3 class='category-section-header'>Films</h3>
+      <% @films.each do |f| %>
+        <p class='categories-index-listed-film'><%= link_to "#{f.title}", film_path(f), class: 'categories-index-film' %></p>
+        <br>
+      <% end %>
       </div>
-        <div id="feature-2" >
-          <p>feature 2</p>
+    </div>
 
-        </div>
-        <div id="feature-3" >
-          <p>feature 3</p>
-        </div>
-        <div id="feature-4" >
-          <p>feature 4</p>
-        </div>
-        <div id="titles" >
-          <% @films.each do |f| %>
-            <%= link_to "#{f.title}", film_path(f), class: 'categories-index-film' %>
-            <br>
-          <% end %>
-        </div>
 
-        </div>
-      </div>
 
-      <!-- <div id="column-container">
-        <div id="column-1" >
-          <p>column 1</p>
-        </div>
-        <div id="column-2" >
-          <p>column 2</p>
-        </div>
-        <div id="column-3" >
-          <p>column 3</p>
-        </div>
-      </div> -->
-  </div>
-</div>
+
 
 
 

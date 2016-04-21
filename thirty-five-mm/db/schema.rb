@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20160418181641) do
     t.boolean  "trusted",         default: false
     t.string   "username",                        null: false
     t.string   "email",                           null: false
+    t.string   "pic_url"
     t.string   "password_digest"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
