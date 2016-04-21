@@ -18,6 +18,11 @@
       <%=video_tag('Gallows_trailer.webm', autoplay: true, loop: true, controls: true, id: 'main-feature-video')%>
 
       <h3 id='categories-index-header' class='category-section-header'>Categories</h3>
+      <ul id='category-film-list'>
+        <% @categories.each do |category| %>
+        <li><%= category.name %></li>
+        <% end %>
+      </ul>
 
     </div>
 
