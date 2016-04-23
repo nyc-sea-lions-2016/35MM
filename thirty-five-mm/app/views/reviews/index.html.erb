@@ -2,10 +2,10 @@
 	<% @film.reviews.each do |review| %>
 		<div class='individual-index-review'>
 			<div>
-				<%= review.user.username %>
+				<h3 id='review-index-username'><%= review.user.username %></h3>
 			</div>
 			<div>
-				<%= review.content %>
+				<p id='review-index-content'><%= review.content %></p>
 			</div>
 			<div class='review-show-link'>
 				<%= link_to 'View Review', film_review_path(@film, review), class: 'button' %>

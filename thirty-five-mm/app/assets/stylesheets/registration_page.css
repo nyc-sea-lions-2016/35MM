@@ -2,6 +2,8 @@
   font-family: 'Fjalla One', sans-serif;
   color: #FFFFFF;
   font-size: 72px;
+  position: relative;
+  left: 9%;
 }
 
 .registration-label {

@@ -1,0 +1,17 @@
+.individual-index-review {
+  margin-bottom: 2%;
+}
+
+#review-index-username {
+  font-size: 42px;
+  padding-left: 2%;
+}
+
+#review-index-content {
+  font-size: 20px;
+  padding-left: 4%;
+}
+
+.review-show-link {
+  padding-left: 2%;
+}

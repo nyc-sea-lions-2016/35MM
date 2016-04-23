@@ -1,11 +1,7 @@
-#login-header {
+#new-review-header {
   position: relative;
   left: 9%;
   font-family: 'Fjalla One', sans-serif;
   color: #FFFFFF;
-  font-size: 72px;
-}
-
-#login-email-wrapper {
-  margin-top: 2%;
+  font-size: 58px;
 }
