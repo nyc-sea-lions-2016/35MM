@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
 
 	def index
-    @categories = Category.all
-    @films = Film.all
+    @categories = Category.order(:name)
+    @films = Film.order(:title)
 		render :index
 	end
 end
