@@ -1,39 +1,35 @@
+<div id='searchbar-wrapper' class='row'>
+  <div class='medium-12 column'>
+    <%= form_tag search_films_path, method: :get, id:'search-form' do %>
+      <%= label_tag :search, "Search Films", id: 'search-films-label' %>
+      <%= text_field_tag :search, params[:search], options = {style:"height:40px;border-radius:25px;", placeholder:"search"} %>
+      <%= submit_tag 'Search', name: nil, class: 'button' %>
+    <% end %>
+  </div>
+</div>
 
-  <div id='searchbar-wrapper' class='row'>
-    <div class='medium-12 column'>
-      <%= form_tag search_films_path, method: :get, id:'search-form' do %>
+<div class='row'>
+  <div id='film-container' class='medium-8 column'>
+    <%=video_tag('Gallows_trailer.webm', autoplay: true, loop: true, controls: true, id: 'main-feature-video')%>
+    <h3 class='category-section-header'>The Gallows</h3>
+    <h3 id='categories-index-header' class='category-section-header'>Categories</h3>
 
-          <%= label_tag :search, "Search Films", id: 'search-films-label' %>
-          <%= text_field_tag :search, params[:search], options = {style:"height:40px;border-radius:25px;", placeholder:"search"} %>
-
-          <%= submit_tag 'Search', name: nil, class: 'button' %>
-
+    <ul id='category-film-list'>
+      <% @categories.each do |category| %>
+        <li><%= category.name %></li>
       <% end %>
-    </div>
+    </ul>
   </div>
 
-  <div class='row'>
-    <div id='film-container' class='medium-8 column'>
-      <%=video_tag('Gallows_trailer.webm', autoplay: true, loop: true, controls: true, id: 'main-feature-video')%>
-        <h3 class='category-section-header'>The Gallows</h3>
-        <p>
-      <h3 id='categories-index-header' class='category-section-header'>Categories</h3>
-      <ul id='category-film-list'>
-        <% @categories.each do |category| %>
-        <li><%= category.name %></li>
-        <% end %>
-      </ul>
+  <div id='film-listing-sidebar' class='medium-4 column'>
+  <h3 class='category-section-header'>Films</h3>
 
-    </div>
-
-      <div id='film-listing-sidebar' class='medium-4 column'>
-      <h3 class='category-section-header'>Films</h3>
-      <% @films.each do |f| %>
-        <p class='categories-index-listed-film'><%= link_to "#{f.title}", film_path(f), class: 'categories-index-film' %></p>
-        <br>
-      <% end %>
-      </div>
-    </div>
+  <% @films.each do |f| %>
+    <p class='categories-index-listed-film'><%= link_to "#{f.title}", film_path(f), class: 'categories-index-film' %></p>
+    <br>
+  <% end %>
+  </div>
+</div>
 
 
 

@@ -7,6 +7,9 @@ class Category < ActiveRecord::Base
     Category.all.count
   end
 
+  def alphabetize
+    self.order(:name)
+  end
   # def top_five
   #   ratings = Rating.where(ratable_type: "Film")
   #   ratings.order("stars DESC")
@@ -25,7 +28,7 @@ class Category < ActiveRecord::Base
   #   top_five_films
   # end
 
-  def feature_film 
+  def feature_film
     films = Film.all
 
   end
