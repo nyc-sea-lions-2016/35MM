@@ -18,6 +18,22 @@
   width: 100%;
 }
 
+#films-listing-container {
+  padding: $padding;
+  margin-top: ($margin * 2);
+  background: $dark-grey;
+  border-radius: $radius;
+}
+
+#left-column {
+  margin-left: ($margin * 6);
+  margin-right: ($margin * 6);
+}
+
+#right-column {
+  margin-right: ($margin * 6);
+}
+
 /*FILM LISTING SIDEBAR CONTENTS*/
 
 #film-listing-sidebar {
