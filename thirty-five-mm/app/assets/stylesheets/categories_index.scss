@@ -1,21 +1,15 @@
 /*SEARCHBAR ELEMENTS*/
 
+@import "components/_variables.scss";
+
 #search-films-label {
-  font-family: 'Fjalla One', sans-serif;
-  color: #FFFFFF;
-  font-size: 68px;
-}
-
-#searchbar-wrapper {
-
-}
-
-#main-content-wrapper {
-
+  font-family: $heading-copy;
+  color: $white;
+  font-size: $large-heading-font-size;
+  margin-bottom: ($margin - 0.5);
 }
 
 #film-container {
-  padding-top: 1%;
   padding-left: 8%;
   display: inline-block;
 }
@@ -32,28 +26,25 @@
 }
 
 .category-section-header {
-  font-family: 'Fjalla One', sans-serif;
-  color: #FFFFFF;
-  font-size: 68px;
+  font-family: $heading-copy;
+  color: $white;
+  font-size: $large-heading-font-size;
 }
 
 .categories-index-listed-film {
-  margin-top: -2%;
+  margin-top: ($margin - 0.5);
   margin-bottom: 0;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 22px;
+  font-family: $body-copy;
+  font-size: $base-font-size;
 }
 
 .categories-index-listed-film a {
-  color: #FFFFFF;
+  color: $white;
 }
 
 /*CATEGORIES INDEX SECTION CONTENTS*/
 
 #categories-index-header {
+  margin-top: ($margin);
   text-align: center;
 }
-
-
-
-
