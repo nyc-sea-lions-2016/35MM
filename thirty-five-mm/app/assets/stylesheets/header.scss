@@ -9,7 +9,7 @@
 }
 
 .top-bar {
-  background-color: #FFFFFF;
+  background-color: $white;
   margin-bottom: 4%;
   height: 110px;
 }
@@ -30,13 +30,6 @@
   display: inline;
   position: relative;
   bottom: 40px;
-  background-color: $white;
-}
-
-.right li {
-  font-family: $heading-copy;
-  font-size: 18px;
-  margin-right: 24px;
   background-color: $white;
 }
 
