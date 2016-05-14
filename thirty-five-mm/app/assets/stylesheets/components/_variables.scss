@@ -1,0 +1,62 @@
+$black: #000;
+$dark-grey: #333;
+$grey: #ccc;
+$light-grey: #ebebeb;
+$off-white: #f5f5f5;
+$white: #ffffff;
+
+$blue1: #3498db;
+$blue2: #2980b9;
+$navy1: #34495e;
+$navy2: #2c3e50;
+
+// background colours
+$primary-background: $black;
+$secondary-background: $dark-grey;
+$third-background: $light-grey;
+$fourth-background: $grey;
+
+// text colours
+$primary-text: $white;
+$light-text: $light-grey;
+$loud-text: $black;
+$heading-text: $white;
+
+// link colours
+$primary-link-color: $red1;
+$primary-link-color-hover: $red2;
+
+// primary border properties
+$border-color: $light-grey;
+$border-size: 1px;
+$border-type: solid;
+$border-focus: $grey;
+$secondary-border-color: $blue1;
+
+// typography
+$body-copy: "Roboto Condensed", "Helvetica Neue", helvetica, arial, verdana, sans-serif;
+$heading-copy: "Fjalla One", "Helvetica Neue", helvetica, arial, verdana, sans-serif;
+$heading-copy-bold: "Fjalla One", helvetica, arial, verdana, sans-serif;
+$base-font-size: 14px;
+$font-size: 1em;
+$base-line-height: 1.5;
+
+// layout
+$margin: 1em;
+$padding: 1em;
+
+// MIXINS
+
+// round corners or Border radius
+.round-corners ($radius: 2px) {
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// animation transitions
+.transition ($transition: background .1s linear) {
+  -moz-transition: $transition;
+  -webkit-transition: $transition;
+  transition: background $transition;
+}
