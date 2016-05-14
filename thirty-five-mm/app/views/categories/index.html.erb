@@ -12,39 +12,39 @@
   <div id='film-container' class='medium-8 columns'>
     <%=video_tag('Gallows_trailer.webm', autoplay: true, loop: true,
                               controls: true, id: 'main-feature-video')%>
-    <h3 id='categories-index-header' class='category-section-header'>Categories</h3>
+    <div class="row">
+      <h3 id='categories-index-header' class='category-section-header'>Categories</h3>
+      <div class="medium-2 columns"
+        <ul id='category-film-list'>
+          <% @first_ten_categories.each do |category| %>
+            <li><%= link_to category.name, category_path(category) %></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="medium-2 columns">
+        <ul class="category-film-list">
+          <% @second_ten_categories.each do |category| %>
+          <li><%= link_to category.name, category_path(category) %></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="medium-2 columns">
+        <ul class="category-film-list">
+          <% @third_ten_categories.each do |category| %>
+          <li><%= link_to category.name, category_path(category) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
+
   <div id='film-listing-sidebar' class='medium-4 columns'>
     <h3 class='category-section-header'>Films</h3>
     <% @films.each do |f| %>
       <p class='categories-index-listed-film'><%= link_to "#{f.title}", film_path(f), class: 'categories-index-film' %></p>
       <br>
     <% end %>
-  </div>
-</div>
-
-<div class="row">
-  <div class="medium-2 columns"
-    <ul id='category-film-list'>
-      <% @first_ten_categories.each do |category| %>
-        <li><%= link_to category.name, category_path(category) %></li>
-      <% end %>
-    </ul>
-  </div>
-
-  <div class="medium-2 columns">
-    <ul class="category-film-list">
-      <% @second_ten_categories.each do |category| %>
-      <li><%= link_to category.name, category_path(category) %></li>
-      <% end %>
-    </ul>
-  </div>
-
-  <div class="medium-2 columns">
-    <ul class="category-film-list">
-      <% @third_ten_categories.each do |category| %>
-      <li><%= link_to category.name, category_path(category) %></li>
-      <% end %>
-    </ul>
   </div>
 </div>
