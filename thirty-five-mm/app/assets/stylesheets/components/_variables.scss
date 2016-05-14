@@ -1,6 +1,6 @@
 $black: #000;
 $dark-grey: #333;
-$grey: #ccc;
+$grey: #aea8a8;
 $light-grey: #ebebeb;
 $off-white: #f5f5f5;
 $white: #ffffff;
@@ -23,8 +23,8 @@ $loud-text: $black;
 $heading-text: $white;
 
 // link colours
-$primary-link-color: $red1;
-$primary-link-color-hover: $red2;
+$primary-link-color: $navy1;
+$primary-link-color-hover: $navy2;
 
 // primary border properties
 $border-color: $light-grey;
@@ -45,17 +45,23 @@ $base-line-height: 1.5;
 $margin: 1em;
 $padding: 1em;
 
+//round corners radius
+
+$radius: 2px;
+
 // MIXINS
 
 // round corners or Border radius
-.round-corners ($radius: 2px) {
+.round-corners {
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
 
+$transition: .1s;
+
 // animation transitions
-.transition ($transition: background .1s linear) {
+.transition {
   -moz-transition: $transition;
   -webkit-transition: $transition;
   transition: background $transition;

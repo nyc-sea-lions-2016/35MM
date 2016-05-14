@@ -1,0 +1,21 @@
+@import "components/_variables.scss";
+
+.footer {
+  margin-top: ($margin * 4);
+  text-align: center;
+  padding-bottom: ($padding * 4);
+}
+
+.footer .large-12 {
+  background: $dark-grey;
+  padding: ($padding * 4) 0;
+}
+
+.footer i {
+  padding: ($padding - 0.5);
+  color: $white;
+}
+
+.footer i:hover {
+  color: $grey;
+}
