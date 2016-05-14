@@ -26,12 +26,12 @@
 }
 
 #left-column {
-  margin-left: ($margin * 6);
+  margin-left: ($margin * 5);
   margin-right: ($margin * 6);
 }
 
 #right-column {
-  margin-right: ($margin * 6);
+  margin-right: ($margin * 7);
 }
 
 /*FILM LISTING SIDEBAR CONTENTS*/
@@ -45,6 +45,7 @@
   font-family: $heading-copy;
   color: $white;
   font-size: $large-heading-font-size;
+  margin-bottom: $margin;
 }
 
 .categories-index-listed-film {
