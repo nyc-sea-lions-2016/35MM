@@ -45,19 +45,17 @@ class CommentsController < ApplicationController
   end
 
 def destroy
-  if params[:film_id]
-    @film = Film.find(params[:film_id])
+  if request.xhr? && params[:film_id]
+    # @film = Film.find(params[:film_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
     flash[:success] = "Comment successfully removed"
-    redirect_to film_path(@film)
   else
     if request.xhr?
       @review = Review.find(params[:review_id])
       @comment = Comment.find(params[:id])
       @comment.destroy
       flash[:success] = "Comment successfully removed"
-      redirect_to film_review_path(@review.film.id, @review)
     end
   end
 end

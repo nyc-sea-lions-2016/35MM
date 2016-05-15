@@ -48,14 +48,12 @@ $(document).ready(function() {
 
   $('.individual-comment').on('click', '.delete-comment-button', function(event) {
     event.preventDefault();
-    var id = $(event.target).attr('id');
     $.ajax({
       type: "post",
       url: $(event.target).attr('href'),
       data: { _method: "delete"}
     });
-    
-    $(event.target).closest('.individual-comment').hide();
+    $(event.target).closest('.individual-comment').fadeOut(300, function() { $(this).remove(); })
   });
 
   //Add to Review Comments
