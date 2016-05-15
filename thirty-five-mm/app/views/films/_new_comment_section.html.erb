@@ -1,6 +1,8 @@
 <div class='new-comment-button'>
-  <li><%= link_to 'Create a New Comment', new_film_comment_path(@film),
+  <% if logged_in? %>
+    <li><%= link_to 'Create a New Comment', new_film_comment_path(@film),
                                               class: 'button' %></li>
+  <% end %>
 </div>
 <div class='create-new-comment-container'>
 </div>

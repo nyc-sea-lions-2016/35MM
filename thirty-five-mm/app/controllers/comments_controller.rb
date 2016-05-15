@@ -1,7 +1,5 @@
 class CommentsController < ApplicationController
 
-  before_action :require_login, only: [:new, :create, :destroy]
-
   def new
     if params[:film_id]
       @film = Film.find(params[:film_id])
