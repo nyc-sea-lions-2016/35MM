@@ -3,10 +3,10 @@
 #comment-listing-container .individual-comment {
   margin-bottom: ($margin * 2);
   padding: $padding;
-  background: $blue2;
+  background: $grey;
   width: 80%;
   border-radius: $radius;
-  border: $border-color $border-size $border-type;
+  // border: $border-color $border-size $border-type;
 }
 
 #comment-listing-container h2 {
