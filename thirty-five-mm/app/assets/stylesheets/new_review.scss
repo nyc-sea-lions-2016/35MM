@@ -1,6 +1,11 @@
 @import "components/_variables.scss";
 
 .review-form-container h1 {
-  position: relative;
   margin-left: ($margin * 6.5);
+  margin-bottom: ($margin - 0.5);
+}
+
+.review-form-container .button {
+  margin-top: ($margin * 2);
+  margin-left: ($margin * 17);
 }
