@@ -1,9 +1,18 @@
 @import "components/_variables.scss";
 
+#comment-listing-container {
+  width: 90%;
+}
+
 #comment-listing-container .individual-comment {
   margin-bottom: ($margin * 2);
   padding: $padding;
   background: $dark-grey;
   width: 80%;
-  border-radius:
+  border-radius: $radius;
+  border: $border-color $border-size $border-type;
+}
+
+#comment-listing-container h2 {
+  margin-bottom: ($margin - 0.5);
 }
