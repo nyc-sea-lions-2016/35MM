@@ -1,7 +1,6 @@
-#new-review-header {
+@import "components/_variables.scss";
+
+.review-form-container h1 {
   position: relative;
-  left: 9%;
-  font-family: 'Fjalla One', sans-serif;
-  color: #FFFFFF;
-  font-size: 58px;
+  margin-left: ($margin * 6.5);
 }
