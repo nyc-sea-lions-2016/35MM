@@ -2,7 +2,7 @@
 
 .reviews-index-container .individual-index-review {
   padding: ($padding * 2);
-  margin-bottom: $margin;
+  margin-bottom: ($margin * 3);
   background: $grey;
   border-radius: $radius;
 }
@@ -14,8 +14,13 @@
 }
 
 .reviews-index-container h3 {
+  text-align: center;
   margin-bottom: ($margin - 0.5);
   font-size: ($medium-heading-font-size * 1.5);
+}
+
+.reviews-index-container #review-creation-time {
+  margin-left: ($margin * 11.5);
 }
 
 .reviews-index-container p {
@@ -24,5 +29,6 @@
 }
 
 .reviews-index-container .button {
+  margin-left: ($margin * 20);
   margin-top: ($margin - 0.5);
 }

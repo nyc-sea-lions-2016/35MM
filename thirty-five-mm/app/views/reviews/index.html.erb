@@ -5,6 +5,7 @@
 			<% @film.reviews.each do |review| %>
 				<div class='individual-index-review'>
 						<h3><%= review.user.username %></h3>
+						<p id="review-creation-time">Created At: <%= review.created_at.strftime('%F') %></p>
 						<p><%= review.content %></p>
 						<%= link_to 'View Review', film_review_path(@film, review), class: 'button' %>
 				</div>
