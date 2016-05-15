@@ -17,13 +17,6 @@
 
  @import "components/_variables.scss";
 
-.flash {
-  font-size: $medium-heading-font-size;
-  text-align: center;
-  font-family: $body-copy;
-  color: $white;
-}
-
 body {
   background-color: $black;
 }
@@ -89,6 +82,11 @@ label {
   background-color: $white;
 }
 
-.comment-section-header {
-  font-size: 60px;
+.comment-listing-container {
+  margin: $margin 0 $margin $margin;
+  padding-top: ($padding - 0.4);
+  padding-left:($padding * 3);
+  border-radius: $radius;
+  background-color: $dark-grey;
+  width: 90%;
 }
