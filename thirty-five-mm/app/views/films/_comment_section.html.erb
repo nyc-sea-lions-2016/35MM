@@ -7,12 +7,11 @@
       <small>Written by <%= link_to comment.user.username, user_path(comment.user) %> at <%= comment.created_at.strftime('%F') %></small>
       <% if comment.user == current_user %>
       <div>
-        <%= link_to 'Delete Comment', film_comment_path(@film, comment),
+        <%= link_to "Delete Comment", film_comment_path(@film, comment),
                                       method: :delete,
+                                      data: { confirm: "Are you sure?" },
                                       remote: true,
-                                      confirm: "Are you sure?",
-                                      class: 'button delete-comment-button',
-                                      id: "#{comment.id}" %>
+                                      class: "button delete-comment-button" %>
       </div>
       <% end %>
     </div>

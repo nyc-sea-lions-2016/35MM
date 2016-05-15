@@ -49,6 +49,10 @@ class CommentsController < ApplicationController
       @film = Film.find_by(id: params[:film_id])
       @comment = @film.comments.find(params[:id])
       @comment.destroy
+      respond_to do |format|
+        format.html { redirect_to film_path(@film) }
+        format.js { render nothing: true }
+      end
     elsif params[:review_id] && request.xhr?
       @review = Review.find(params[:review_id])
       @comment = Comment.find(params[:id])
