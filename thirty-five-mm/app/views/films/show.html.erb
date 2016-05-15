@@ -48,18 +48,10 @@
     </div>
   </div>
 
-  <div class='large-9 columns'>
-    <div id='synopsis-container'>
-      <h2>Synopsis</h2>
-      <p><%= @film.summary %></p>
-    </div>
+  <%= render partial: "synopsis_section" %>
 
 
-      <div class='new-comment-button'>
-        <li><%= link_to 'Create a New Comment', new_film_comment_path(@film), class: 'button' %></li>
-      </div>
-      <div class='create-new-comment-container'>
-      </div>
+  <%= render partial: "new_comment_section" %>
 
 
   <%= render partial: "comment_section" %>
