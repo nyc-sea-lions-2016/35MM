@@ -1,0 +1,10 @@
+<div class='reviews-container'>
+  <h2 class='section-title'>Review</h2>
+  <%= link_to 'View Reviews', film_reviews_path(@film), class: 'button' %>
+  <%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %>
+  <div class='review-listing-container'>
+    <div class='featured-review'>
+        <%= @film.reviews.first.content %>
+    </div>
+  </div>
+</div>

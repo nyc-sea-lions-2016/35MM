@@ -1,0 +1,33 @@
+@import "components/_variables.scss";
+
+#film-title {
+  text-align: center;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: $margin;
+}
+
+.large-3 {
+  margin-top: ($margin * 2);
+}
+
+#section-title {
+  padding-top: ($padding - 0.5);
+}
+
+#synopsis-container {
+  margin-top: $margin;
+  padding: $padding $padding $padding ($padding * 2);
+}
+
+#comment-listing-container {
+  margin: $margin 0 $margin $margin;
+  padding-top: ($padding - 0.4);
+  padding-left:($padding * 3);
+  border-radius: $radius;
+  background-color: $grey;
+}
+
+.new-comment-button {
+  text-align: center;
+}

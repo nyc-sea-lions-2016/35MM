@@ -1,0 +1,11 @@
+@import "components/_variables.scss";
+
+.registration-container h1 {
+  margin-left: ($margin * 7.5);
+  margin-bottom: ($margin - 0.5);
+}
+
+.registration-container .button {
+  margin-top: ($margin * 2);
+  margin-left: ($margin * 17);
+}

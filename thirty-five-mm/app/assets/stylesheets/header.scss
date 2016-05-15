@@ -1,0 +1,41 @@
+@import "components/_variables.scss";
+
+#navbar-logo {
+  font-family: $heading-copy;
+  text-align: left;
+  display: inline;
+  position: relative;
+  top: 12px;
+}
+
+.top-bar {
+  background-color: $white;
+  margin-bottom: 4%;
+  height: 110px;
+}
+
+.top-bar a {
+  color: $black;
+}
+
+.top-bar a:hover {
+  color: $grey;
+}
+.top-bar ul {
+  background-color: $white;
+}
+
+.right {
+  float: right;
+  display: inline;
+  position: relative;
+  bottom: 40px;
+  background-color: $white;
+}
+
+.right li a {
+  font-size: 32px;
+  color: $black;
+  position: relative;
+  bottom: 12px;
+}

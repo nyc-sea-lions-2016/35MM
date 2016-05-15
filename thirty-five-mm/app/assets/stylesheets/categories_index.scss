@@ -1,0 +1,67 @@
+/*SEARCHBAR ELEMENTS*/
+
+@import "components/_variables.scss";
+
+#search-films-label {
+  font-family: $heading-copy;
+  color: $white;
+  font-size: $large-heading-font-size;
+  margin-bottom: ($margin - 0.5);
+}
+
+#film-container {
+  padding-left: 8%;
+  display: inline-block;
+}
+
+#main-feature-video {
+  width: 100%;
+}
+
+#films-listing-container {
+  padding: $padding;
+  margin-top: ($margin * 2);
+  background: $dark-grey;
+  border-radius: $radius;
+}
+
+#left-column {
+  margin-left: ($margin * 5);
+  margin-right: ($margin * 6);
+}
+
+#right-column {
+  margin-right: ($margin * 7);
+}
+
+/*FILM LISTING SIDEBAR CONTENTS*/
+
+#film-listing-sidebar {
+  padding-left: 6%;
+  display: inline-block;
+}
+
+.category-section-header {
+  font-family: $heading-copy;
+  color: $white;
+  font-size: $large-heading-font-size;
+  margin-bottom: $margin;
+}
+
+.categories-index-listed-film {
+  margin-top: ($margin - 0.5);
+  margin-bottom: 0;
+  font-family: $body-copy;
+  font-size: $base-font-size;
+}
+
+.categories-index-listed-film a {
+  color: $white;
+}
+
+/*CATEGORIES INDEX SECTION CONTENTS*/
+
+#categories-index-header {
+  margin-top: ($margin);
+  text-align: center;
+}

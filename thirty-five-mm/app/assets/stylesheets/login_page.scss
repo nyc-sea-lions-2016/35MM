@@ -1,0 +1,11 @@
+@import "components/_variables.scss";
+
+#login-container h1 {
+  margin-left: ($margin * 3);
+  margin-bottom: ($margin - 0.5);
+}
+
+#login-container .button {
+  margin-top: ($margin * 2);
+  margin-left: ($margin * 15);
+}
