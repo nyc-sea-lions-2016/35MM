@@ -35,6 +35,8 @@
 
 .right li a {
   font-size: 32px;
+  font-family: $heading-copy;
+  margin-left: ($margin);
   color: $black;
   position: relative;
   bottom: 12px;
