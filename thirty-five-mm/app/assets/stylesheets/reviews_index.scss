@@ -1,19 +1,28 @@
 @import "components/_variables.scss";
 
+.reviews-index-container .individual-index-review {
+  padding: ($padding * 2);
+  margin-bottom: $margin;
+  background: $grey;
+  border-radius: $radius;
+}
+
 .reviews-index-container h2 {
+  text-align: center;
   margin-top: ($margin - 0.5);
   margin-bottom: ($margin - 0.5);
 }
 
 .reviews-index-container h3 {
+  margin-bottom: ($margin - 0.5);
   font-size: ($medium-heading-font-size * 1.5);
 }
 
-#review-index-content {
-  font-size: 20px;
-  padding-left: 4%;
+.reviews-index-container p {
+  margin-left: ($margin);
+  font-size: ($base-font-size * 1.2);
 }
 
-.review-show-link {
-  padding-left: 2%;
+.reviews-index-container .button {
+  margin-top: ($margin - 0.5);
 }
