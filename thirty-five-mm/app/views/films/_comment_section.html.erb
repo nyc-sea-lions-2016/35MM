@@ -2,13 +2,13 @@
   <ul>
     <h2>Comment Section</h2>
       <% @film.comments.each do |comment| %>
-    <li class='individual-comment'>
+    <div class='individual-comment'>
       <p><%= comment.content %><p>
       <small>Written by <%= link_to comment.user.username, user_path(comment.user) %> at <%= comment.created_at.strftime('%F') %></small>
       <% if comment.user == current_user %>
         <%= link_to 'Delete Comment', "/films/#{@film.id}/comments/#{comment.id}", class: 'button delete-comment-button' %>
       <% end %>
-    </li>
+    </div>
       <% end %>
   </ul>
 </div>
