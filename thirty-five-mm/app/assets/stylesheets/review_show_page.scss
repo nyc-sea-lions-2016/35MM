@@ -1,12 +1,14 @@
+@import "components/_variables.scss";
+
 #jumbotron-image {
   width: 100%;
 }
 
-.review-column {
-  padding-left: 1%;
+.review-show-container .review-column {
+  padding-left: ($padding - 0.5);
 }
 
-.review-title {
+.review-show-container h2 {
   text-align: center;
 }
 
@@ -49,4 +51,3 @@
 .content-column {
   background-color: yellow;
 }
-

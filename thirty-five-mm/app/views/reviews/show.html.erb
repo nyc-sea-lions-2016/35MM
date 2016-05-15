@@ -1,17 +1,14 @@
-
-  <div id ='wrapper' class='row'>
-
+<div class="review-show-container">
+  <div class='row'>
     <div class='medium-4 columns image-column'>
       <div id='film-image-container'>
         <%= image_tag('bergman-poster.jpg', :id => 'jumbotron-image') %>
-
       </div>
     </div>
 
     <div class='medium-8 columns review-column'>
       <div id='review-container'>
-        <h2 class='review-title'>Hour of the Wolf</h2>
-        <!-- Need to add review title to models/migrations - placeholder for now -->
+        <h2><%= @review.film.title %></h2>
         <h3 class='review-author'>By <%= @review.user.username %></h3>
         <div class='review-info'>
           <span><%= @review.created_at.strftime('%F') %> | </span>
@@ -40,3 +37,4 @@
       </div>
     </div>
   </div>
+</div>
