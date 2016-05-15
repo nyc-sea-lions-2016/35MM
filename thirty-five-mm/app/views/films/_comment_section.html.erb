@@ -8,7 +8,9 @@
       <% if comment.user == current_user %>
       <div>
         <%= link_to 'Delete Comment', "/films/#{@film.id}/comments/#{comment.id}",
-                                        class: 'button delete-comment-button'
+                                        method: :delete,
+                                        confirm: "Are you sure?",
+                                        class: 'button delete-comment-button',
                                         id: "#{comment.id}" %>
       </div>
       <% end %>
