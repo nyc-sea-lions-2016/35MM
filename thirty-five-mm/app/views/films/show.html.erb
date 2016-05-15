@@ -62,15 +62,6 @@
       </div>
 
 
-    <div class='comment-listing-container'>
-      <ul class='comment-listing'>
-        <h2 class='comment-section-header'>Comment Section</h2>
-          <% @film.comments.each do |comment| %>
-        <li class='individual-comment'>
-          <p><%= comment.content %><p>
-          <%= link_to 'Delete Comment', "/films/#{@film.id}/comments/#{comment.id}", class: 'button delete-comment-button' %>
-        </li>
-          <% end %>
-      </ul>
-    </div>
+  <%= render partial: "comment_section" %>
+
   </div>
