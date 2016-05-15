@@ -1,18 +1,11 @@
-.registration-header {
-  font-family: 'Fjalla One', sans-serif;
-  color: #FFFFFF;
-  font-size: 72px;
-  position: relative;
-  left: 9%;
+@import "components/_variables.scss";
+
+.registration-container h1 {
+  margin-left: ($margin * 7.5);
+  margin-bottom: ($margin - 0.5);
 }
 
-.registration-label {
-  color: #FFFFFF;
-}
-
-label {
-  font-family: 'Roboto Condensed';
-  font-size: 24px;
-  text-align: center;
-  color: #FFFFFF;
+.registration-container .button {
+  margin-top: ($margin * 2);
+  margin-left: ($margin * 17);
 }

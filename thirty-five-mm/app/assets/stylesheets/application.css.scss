@@ -68,6 +68,13 @@ a {
   color: $white;
 }
 
+label {
+  font-family: $body-copy;
+  font-size: $label-font-size;
+  text-align: center;
+  color: $white;
+}
+
 .title-area h1 {
   font-size: 62px;
   margin-bottom: 0;
