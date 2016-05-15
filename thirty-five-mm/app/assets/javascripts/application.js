@@ -37,6 +37,7 @@ $(document).ready(function() {
       url: $(event.target).attr('action'),
       data: $(event.target).serialize()
     }).then(function(response) {
+      debugger;
       $(event.target).hide();
       $('.create-new-comment-container').hide();
       $('.new-comment-button').show();
