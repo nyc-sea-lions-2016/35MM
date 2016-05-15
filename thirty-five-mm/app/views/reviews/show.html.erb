@@ -7,9 +7,8 @@
     </div>
 
     <div class='medium-8 columns review-column'>
-      <div id='review-container'>
-        <h2><%= @review.film.title %></h2>
-        <h3 class='review-author'>By <%= @review.user.username %></h3>
+        <h2 id="review-title"><%= @review.film.title %></h2>
+        <h3>By <%= @review.user.username %></h3>
         <div class='review-info'>
           <span><%= @review.created_at.strftime('%F') %> | </span>
           <span><%= @review.content.length %> Characters</span>
@@ -19,7 +18,6 @@
           <li><%= link_to 'Edit Review', edit_film_review_path(@film, @review), class: 'button' %></li>
           <li><%= link_to 'Delete Review', film_review_path(@film, @review), method: :delete, confirm: 'Are you sure?', class: 'button' %></li>
         </ul>
-      </div>
 
       <div id='review-comments-container'>
         <h2 class='comment-section-header'>Comments</h2>

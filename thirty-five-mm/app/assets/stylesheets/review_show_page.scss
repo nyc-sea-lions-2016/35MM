@@ -8,15 +8,15 @@
   padding-left: ($padding - 0.5);
 }
 
-.review-show-container h2 {
+.review-show-container #review-title {
   text-align: center;
 }
 
-.review-author {
+.review-show-container h3 {
   text-align: center;
 }
 
-.review-info {
+.review-show-container .review-info {
   text-align: center;
 }
 
