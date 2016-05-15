@@ -44,21 +44,17 @@ class CommentsController < ApplicationController
   def update
   end
 
-def destroy
-  if request.xhr? && params[:film_id]
-    # @film = Film.find(params[:film_id])
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    flash[:success] = "Comment successfully removed"
-  else
-    if request.xhr?
+  def destroy
+    if params[:film_id] && request.xhr?
+      @film = Film.find_by(id: params[:film_id])
+      @comment = @film.comments.find(params[:id])
+      @comment.destroy
+    elsif params[:review_id] && request.xhr?
       @review = Review.find(params[:review_id])
       @comment = Comment.find(params[:id])
       @comment.destroy
-      flash[:success] = "Comment successfully removed"
     end
   end
-end
 
   private
 
