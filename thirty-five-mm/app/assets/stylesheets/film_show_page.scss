@@ -7,26 +7,19 @@
   margin-left: $margin;
 }
 
-//Left Column
-
 .large-3 {
   margin-top: ($margin * 2);
 }
 
-/*Column Container for Synopsis*/
+#section-title {
+  padding-top: ($padding - 0.5);
+}
 
 #synopsis-container {
   margin-top: $margin;
   padding: $padding $padding $padding ($padding * 2);
 }
 
-/*SECTION CONTAINIING REVIEWS*/
-
-#section-title {
-  padding-top: ($padding - 0.5);
-}
-
-/*COMMENT CONTAINER FOR FILM SHOW*/
 #comment-listing-container {
   margin: $margin 0 $margin $margin;
   padding-top: ($padding - 0.4);
