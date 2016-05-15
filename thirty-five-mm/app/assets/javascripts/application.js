@@ -46,15 +46,20 @@ $(document).ready(function() {
 
   //Delete for Film Comments
 
-  $('.individual-comment').on('click', '.delete-comment-button', function(event) {
+  $('.individual-comment').on('click', '.delete-comment', function(event) {
     event.preventDefault();
+    debugger;
     $.ajax({
-      type: "post",
+      method: "POST",
       url: $(event.target).attr('href'),
-      data: { _method: "delete"}
-    });
+      dataType: "json",
+      data: { _method: "delete"},
+      complete: function() {
+    debugger;
     $(event.target).closest('.individual-comment').fadeOut(300, function() { $(this).remove(); })
-  });
+    }
+  })
+});
 
   //Add to Review Comments
 
