@@ -16,6 +16,10 @@
   text-align: center;
 }
 
+#review-section #review-buttons {
+  margin-left: ($margin * 17);
+}
+
 #review-comments-container {
   margin: $margin 0 $margin $margin;
   padding-top: $padding;

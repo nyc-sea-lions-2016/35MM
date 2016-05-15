@@ -1,11 +1,15 @@
-<h2 id="review-title"><%= @review.film.title %></h2>
-  <h3>By <%= @review.user.username %></h3>
-  <div class='review-info'>
-    <span><%= @review.created_at.strftime('%F') %> | </span>
-    <span><%= @review.content.length %> Characters</span>
-  </div>
-  <p><%= @review.content %></p>
-  <ul>
-    <li><%= link_to 'Edit Review', edit_film_review_path(@film, @review), class: 'button' %></li>
-    <li><%= link_to 'Delete Review', film_review_path(@film, @review), method: :delete, confirm: 'Are you sure?', class: 'button' %></li>
-  </ul>
+<div id="review-section">
+  <h2 id="review-title"><%= @review.film.title %></h2>
+    <h3>By <%= @review.user.username %></h3>
+    <div class='review-info'>
+      <span><%= @review.created_at.strftime('%F') %> | </span>
+      <span><%= @review.content.length %> Characters</span>
+    </div>
+    <p><%= @review.content %></p>
+    <ul>
+      <div id="review-buttons">
+        <li><%= link_to 'Edit Review', edit_film_review_path(@film, @review), class: 'button' %></li>
+        <li><%= link_to 'Delete Review', film_review_path(@film, @review), method: :delete, confirm: 'Are you sure?', class: 'button' %></li>
+      </div>
+    </ul>
+</div>
