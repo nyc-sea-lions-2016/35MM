@@ -21,9 +21,7 @@
 }
 
 #review-comments-container {
-  margin-top: 4%;
-  margin-left: 4%;
-  margin-bottom: 4%;
+  margin: $margin 0 $margin $margin;
   width: 90%;
   border-radius: 5px;
   background-color: gray;
