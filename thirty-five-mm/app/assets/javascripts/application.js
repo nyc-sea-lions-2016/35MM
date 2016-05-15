@@ -40,7 +40,7 @@ $(document).ready(function() {
       $(event.target).hide();
       $('.create-new-comment-container').hide();
       $('.new-comment-button').show();
-      $('.comment-listing').append(response);
+      $('.comment-listing').append(response).hide().fadeIn(800);
     });
   });
 
