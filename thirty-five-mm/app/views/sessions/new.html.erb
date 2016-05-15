@@ -1,23 +1,14 @@
-<h1 id='login-header'>Log In</h1>
+<div id='login-container' class='row'>
+  <div class='medium-6 medium-centered columns'>
+    <h1 id='login-header'>Log In</h1>
+    <%= form_for :sessions, url: login_path do |f| %>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
 
-<%= form_for :sessions, url: login_path do |f| %>
-  <div id='login-email-wrapper' class='row'>
-    <div class='medium-6 medium-centered columns'>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-    </div>
-  </div>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
 
-  <div class='row'>
-    <div class='medium-6 medium-centered columns'>
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-    </div>
+        <%= f.submit 'Login to Account', class: 'button' %>
+    <% end %>
   </div>
-
-  <div class='row'>
-    <div class='medium-6 medium-centered columns'>
-      <%= f.submit 'Login to Account', class: 'button' %>
-    </div>
-  </div>
-<% end %>
+</div>
