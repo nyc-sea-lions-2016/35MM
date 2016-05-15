@@ -22,11 +22,10 @@
 
 #review-comments-container {
   margin: $margin 0 $margin $margin;
-  width: 90%;
-  border-radius: 5px;
-  background-color: gray;
-  padding-top: 2%;
-  padding-left: 6%;
+  padding-top: $padding;
+  padding-left: ($padding * 3);
+  border-radius: $radius;
+  background-color: $grey;
 }
 
 .new-comment-header {
