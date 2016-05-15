@@ -1,4 +1,4 @@
-<h1 class='film-title'><%= @film.title %></h1>
+<h1 id='film-title'><%= @film.title %></h1>
 
 <div id='film-show-container' class='row'>
   <div class='large-3 columns'>
@@ -8,7 +8,7 @@
     <h2>Score</h2>
       <div id="star-rating">
         <!-- How do I get star rating font to be white? -->
-        <h4 class='star-rating-text'>Star rating:</h4> <%= render_stars(@film.no_of_stars) %>
+        <h4>Star rating:</h4> <%= render_stars(@film.no_of_stars) %>
         <% if logged_in? %>
 
           <% unless @film.has_been_rated?(current_user.id) %>
@@ -37,7 +37,7 @@
 
 <!-- Reviews will go here -->
     <div class='reviews-container'>
-      <h2 class='section-title'>Review</h2>
+      <h2 id='section-title'>Review</h2>
       <%= link_to 'View Reviews', film_reviews_path(@film), class: 'button' %>
       <%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %>
       <div class='review-listing-container'>
