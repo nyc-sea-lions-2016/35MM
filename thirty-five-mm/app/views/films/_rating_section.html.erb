@@ -1,0 +1,29 @@
+<h2>Score</h2>
+  <div id="star-rating">
+    <!-- How do I get star rating font to be white? -->
+    <h4 class='star-rating-text'>Star rating:</h4> <%= render_stars(@film.no_of_stars) %>
+    <% if logged_in? %>
+
+      <% unless @film.has_been_rated?(current_user.id) %>
+
+      <h5>Add a Rating:</h5>
+        <div id='rating_form_div'>
+        <%= form_for @rating, url: film_ratings_path(@film) do |f| %>
+          <%= f.label :stars %>
+
+          <%= f.radio_button(:stars, "1") %>
+          <%= f.label(:stars, "1") %>
+          <%= f.radio_button(:stars, "2") %>
+          <%= f.label(:stars, "2") %>
+          <%= f.radio_button(:stars, "3") %>
+          <%= f.label(:stars, "3") %>
+          <%= f.radio_button(:stars, "4") %>
+          <%= f.label(:stars, "4") %>
+          <%= f.radio_button(:stars, "5") %>
+          <%= f.label(:stars, "5") %>
+          <%= f.submit "Rate me!" %>
+        <% end %>
+      </div>
+      <% end %>
+    <% end %>
+  </div>

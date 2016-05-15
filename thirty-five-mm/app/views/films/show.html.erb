@@ -1,10 +1,7 @@
-<!-- to be centered -->
-
 <h1 class='film-title'><%= @film.title %></h1>
 
 <div id='film-show-container' class='row'>
   <div class='large-3 columns'>
-<!-- Image Will go here -->
   <%= image_tag('bergman-poster.jpg') %>
 
 <!-- Ratings go here -->
@@ -41,12 +38,8 @@
 <!-- Reviews will go here -->
     <div class='reviews-container'>
       <h2 class='section-title'>Review</h2>
-      <div class='view-film-reviews-button'>
       <%= link_to 'View Reviews', film_reviews_path(@film), class: 'button' %>
-      </div>
-      <div class='new-review-button'>
-        <%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %>
-      </div>
+      <%= link_to 'Write a Review', new_film_review_path(@film), class: 'button' %>
       <div class='review-listing-container'>
         <div class='featured-review'>
             <%= @film.reviews.first.content %>
@@ -55,8 +48,8 @@
     </div>
   </div>
 
-  <div class='large-9 columns synopsis-column'>
-    <div class='synopsis-container'>
+  <div class='large-9 columns'>
+    <div id='synopsis-container'>
       <h2>Synopsis</h2>
       <p><%= @film.summary %></p>
     </div>
@@ -78,11 +71,6 @@
           <%= link_to 'Delete Comment', "/films/#{@film.id}/comments/#{comment.id}", class: 'button delete-comment-button' %>
         </li>
           <% end %>
-    <!-- Synopsis will go here -->
-    <!-- Comment box will go here -->
-    <!-- Comments index will go here -->
       </ul>
     </div>
-</div>
-
-
+  </div>

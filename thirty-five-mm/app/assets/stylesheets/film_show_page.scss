@@ -1,50 +1,21 @@
 @import "components/_variables.scss";
 
-h1 {
-  text-align: center;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
 .film-title {
+  text-align: center;
   text-transform: uppercase;
   text-align: left;
   margin-left: $margin
 }
 
-.new-comment-button {
-  width: 100%;
-  text-align: center;
-}
-
-#wrapper {
-  max-width: 120%;
-}
-
-.comment-listing-container {
-  /*background-color: blue;*/
-}
-
 .large-3 {
-  margin-top: 4%;
-}
-
-.large-9 {
-  /*background-color: green;*/
-  margin-top: 2%;
-  padding: 2% 4% 2% 4%;
-}
-
-.large-3 {
-  /*background-color: yellow;*/
+  margin-top: ($margin * 2);
 }
 
 /*Column Container for Synopsis*/
 
-.synopsis-container {
-  padding-left: 3%;
+#synopsis-container {
+  margin-top: $margin;
+  padding: $padding $padding $padding ($padding * 2);
 }
 
 /*SECTION CONTAINIING REVIEWS*/
@@ -63,6 +34,10 @@ h2 {
   background-color: gray;
   padding-top: 2%;
   padding-left: 6%;
+}
+
+.new-comment-button {
+  text-align: center;
 }
 
 .star-rating-text {
