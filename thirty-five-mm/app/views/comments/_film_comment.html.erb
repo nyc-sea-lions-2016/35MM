@@ -1,4 +1,7 @@
-<li class='individual-comment'>
+<div class='individual-comment'>
   <p><%= comment.content %><p>
-  <%= link_to 'Delete Comment', "/films/#{@film.id}/comments/#{comment.id}", class: 'button delete-comment-button' %>
-</li>
+  <small>Written by <%= link_to comment.user.username, user_path(comment.user) %> at <%= comment.created_at.strftime('%F') %></small>
+  <div>
+    <%= link_to 'Delete Comment', "/films/#{@film.id}/comments/#{comment.id}", class: 'button delete-comment-button' %>
+  </div>
+</div>
