@@ -4,7 +4,7 @@
   text-align: center;
   text-transform: uppercase;
   text-align: left;
-  margin-left: $margin
+  margin-left: $margin;
 }
 
 //Left Column
@@ -23,7 +23,7 @@
 /*SECTION CONTAINIING REVIEWS*/
 
 #section-title {
-  padding-top: 8%;
+  padding-top: ($padding - 0.5);
 }
 
 /*COMMENT CONTAINER FOR FILM SHOW*/
