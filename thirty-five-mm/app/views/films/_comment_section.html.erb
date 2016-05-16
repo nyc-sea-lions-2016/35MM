@@ -1,6 +1,7 @@
 <div class='comment-listing-container'>
   <ul class="comment-listing">
     <h2>Comment Section</h2>
+    <% if @film.comments.any? %>
       <% @film.comments.each do |comment| %>
     <div class='individual-comment'>
       <p><%= comment.content %><p>
@@ -16,5 +17,6 @@
       <% end %>
     </div>
       <% end %>
+    <%  end %>
   </ul>
 </div>

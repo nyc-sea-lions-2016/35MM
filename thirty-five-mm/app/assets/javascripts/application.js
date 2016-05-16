@@ -48,8 +48,8 @@ $(document).ready(function() {
 
   $('.comment-listing-container').on('click', '.delete-comment', function(event) {
     event.preventDefault();
-    // debugger;
-    $(".delete-comment").parent().parent().remove().fadeOut(1000);
+
+    $(".delete-comment").parent().parent().fadeOut(1000);
     $.ajax({
       // method: "POST",
       url: $(event.target).attr('href'),
@@ -58,6 +58,19 @@ $(document).ready(function() {
       // data: { _method: "delete"}
       })
 });
+
+  // $(".delete-comment").on('click', function(event) {
+  //   $(".individual-comment").fadeOut(1000);
+
+  //   event.preventDefault();
+  //   $.ajax({
+  //     method: "POST",
+  //     url: $(event.target).attr('href'),
+  //     type: 'DELETE',
+  //     // dataType: "json",
+  //     // data: { _method: "delete"}
+  //     })
+  // });
 
   //Add to Review Comments
 

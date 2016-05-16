@@ -45,9 +45,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    if params[:film_id] && request.xhr?
       @film = Film.find_by(id: params[:film_id])
-      @comment = @film.comments.find(params[:id])
+      @comment = @film.comments.find_by(id: params[:id])
+
+    if @film && @comment && request.xhr?
       @comment.destroy
       respond_to do |format|
         format.html { redirect_to film_path(@film) }
@@ -57,6 +58,8 @@ class CommentsController < ApplicationController
       @review = Review.find(params[:review_id])
       @comment = Comment.find(params[:id])
       @comment.destroy
+    else 
+      redirect_to film_path(@film)
     end
   end
 
