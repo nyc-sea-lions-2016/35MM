@@ -17,6 +17,13 @@
 
  @import "components/_variables.scss";
 
+.flash {
+  font-size: $medium-heading-font-size;
+  text-align: center;
+  font-family: $body-copy;
+  color: $white;
+}
+
 body {
   background-color: $black;
 }

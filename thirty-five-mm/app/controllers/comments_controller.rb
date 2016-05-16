@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
     if params[:film_id]
       @film = Film.find(params[:film_id])
       @comment = @film.comments.build(comments_params)
-      @comment.user_id = current_user
+      @comment.user_id = current_user.id
         if request.xhr? && @comment.save
           flash[:success] = "Comment successfully saved"
           render '_film_comment.html.erb', locals: {film: @film, comment: @comment}, layout: false
