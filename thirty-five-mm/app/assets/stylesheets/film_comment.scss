@@ -1,0 +1,13 @@
+@import "components/_variables.scss";
+
+.individual-comment {
+  margin-bottom: ($margin * 2);
+  padding: $padding;
+  background: $grey;
+  width: 80%;
+  border-radius: $radius;
+}
+
+#comment-listing-container h2 {
+  margin-bottom: ($margin - 0.5);
+}

@@ -44,23 +44,21 @@ class CommentsController < ApplicationController
   def update
   end
 
-def destroy
-  if params[:film_id]
-    @film = Film.find(params[:film_id])
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    flash[:success] = "Comment successfully removed"
-    redirect_to film_path(@film)
-  else
-    if request.xhr?
+  def destroy
+    if params[:film_id] && request.xhr?
+      @film = Film.find_by(id: params[:film_id])
+      @comment = @film.comments.find(params[:id])
+      @comment.destroy
+      respond_to do |format|
+        format.html { redirect_to film_path(@film) }
+        format.js { render nothing: true }
+      end
+    elsif params[:review_id] && request.xhr?
       @review = Review.find(params[:review_id])
       @comment = Comment.find(params[:id])
       @comment.destroy
-      flash[:success] = "Comment successfully removed"
-      redirect_to film_review_path(@review.film.id, @review)
     end
   end
-end
 
   private
 

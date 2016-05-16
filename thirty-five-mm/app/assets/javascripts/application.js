@@ -37,25 +37,29 @@ $(document).ready(function() {
       url: $(event.target).attr('action'),
       data: $(event.target).serialize()
     }).then(function(response) {
-      debugger;
       $(event.target).hide();
       $('.create-new-comment-container').hide();
       $('.new-comment-button').show();
-      $('.comment-listing').append(response);
+      $('.comment-listing').append(response).hide().fadeIn(800);
     });
   });
 
   //Delete for Film Comments
 
-  $('.comment-listing-container').on('click', '.delete-comment-button', function(event) {
+  $('.individual-comment').on('click', '.delete-comment', function(event) {
     event.preventDefault();
+    debugger;
     $.ajax({
-      type: "post",
+      method: "POST",
       url: $(event.target).attr('href'),
-      data: { _method: "delete"}
-    });
-    $(event.target).closest('.individual-comment').hide();
-  });
+      dataType: "json",
+      data: { _method: "delete"},
+      complete: function() {
+    debugger;
+    $(event.target).closest('.individual-comment').fadeOut(300, function() { $(this).remove(); })
+    }
+  })
+});
 
   //Add to Review Comments
 

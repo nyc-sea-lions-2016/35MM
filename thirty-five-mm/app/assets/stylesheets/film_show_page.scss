@@ -25,7 +25,8 @@
   padding-top: ($padding - 0.4);
   padding-left:($padding * 3);
   border-radius: $radius;
-  background-color: $grey;
+  background-color: $dark-grey;
+  width: 90%;
 }
 
 .new-comment-button {
