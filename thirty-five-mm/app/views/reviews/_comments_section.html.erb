@@ -1,0 +1,14 @@
+<div id='review-comments-container'>
+  <h2>Comments</h2>
+    <ul>
+    <% @review.comments.reverse.each do |comment| %>
+      <li class='individual-comment'>
+        <p><%= comment.content %></p>
+        <%= link_to 'Delete Comment', "/reviews/#{@review.id}/comments/#{comment.id}", method: :delete, class: 'button delete-comment-button' %>
+      </li>
+    <% end %>
+    </ul>
+    <div>
+      <%= link_to 'Create a New Comment', new_review_comment_path(@review), class: 'button create-new-review-comment-button' %>
+    </div>
+</div>

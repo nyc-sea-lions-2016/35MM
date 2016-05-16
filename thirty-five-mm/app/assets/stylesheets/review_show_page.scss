@@ -1,52 +1,25 @@
-#jumbotron-image {
-  width: 100%;
+@import "components/_variables.scss";
+
+.review-show-container .review-column {
+  padding-left: ($padding - 0.5);
 }
 
-.review-column {
-  padding-left: 1%;
-}
-
-.review-title {
+.review-show-container #review-title {
   text-align: center;
 }
 
-.review-author {
+.review-show-container h3 {
   text-align: center;
 }
 
-.review-info {
-  text-align: center;
-}
-
-#review-container {
-  max-width: 100%
-}
-
-.review-comment-label {
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #FFFFFF;
-  font-size: 24px;
+.review-show-container .review-info {
   text-align: center;
 }
 
 #review-comments-container {
-  margin-top: 4%;
-  margin-left: 4%;
-  margin-bottom: 4%;
-  width: 90%;
-  border-radius: 5px;
-  background-color: gray;
-  padding-top: 2%;
-  padding-left: 6%;
+  margin: $margin 0 $margin $margin;
+  padding-top: $padding;
+  padding-left: ($padding * 3);
+  border-radius: $radius;
+  background-color: $grey;
 }
-
-.new-comment-header {
-  font-family: 'Fjalla One', sans-serif;
-  color: #FFFFFF;
-  font-size: 58px;
-}
-
-.content-column {
-  background-color: yellow;
-}
-
