@@ -10,6 +10,12 @@
   margin-left: ($margin * 3);
 }
 
+#search-button {
+  margin-left: ($margin * 32);
+  margin-top: ($margin);
+  width: 20%;
+}
+
 #film-container {
   padding-left: 8%;
   display: inline-block;
@@ -29,6 +35,9 @@
 #left-column {
   margin-left: ($margin * 5);
   margin-right: ($margin * 6);
+}
+
+#center-column {
 }
 
 #right-column {
@@ -63,6 +72,6 @@
 /*CATEGORIES INDEX SECTION CONTENTS*/
 
 #categories-index-header {
-  margin-top: ($margin);
+  margin-top: ($margin - 0.5);
   text-align: center;
 }

@@ -3,7 +3,7 @@
     <%= form_tag search_films_path, method: :get, id:'search-form' do %>
       <%= label_tag :search, "Search Films", id: 'search-films-label' %>
       <%= text_field_tag :search, params[:search], options = {style:"height:40px;border-radius:25px;", placeholder:"search"} %>
-      <%= submit_tag 'Search', name: nil, class: 'button' %>
+      <%= submit_tag 'Search', name: nil, class: 'button', id: "search-button" %>
     <% end %>
   </div>
 </div>
@@ -15,28 +15,22 @@
     <div id="films-listing-container" class="row">
       <h3 id='categories-index-header' class='category-section-header'>Categories</h3>
 
-      <div id="left-column" class="medium-2 columns"
-        <ul id='category-film-list'>
+      <div id="left-column" class="medium-2 columns">
           <% @first_ten_categories.each do |category| %>
             <li><%= link_to category.name, category_path(category) %></li>
           <% end %>
-        </ul>
       </div>
 
       <div id="center-column" class="medium-2 columns">
-        <ul class="category-film-list">
           <% @second_ten_categories.each do |category| %>
           <li><%= link_to category.name, category_path(category) %></li>
           <% end %>
-        </ul>
       </div>
 
       <div id="right-column" class="medium-2 columns">
-        <ul class="category-film-list">
           <% @third_ten_categories.each do |category| %>
           <li><%= link_to category.name, category_path(category) %></li>
           <% end %>
-        </ul>
       </div>
     </div>
   </div>

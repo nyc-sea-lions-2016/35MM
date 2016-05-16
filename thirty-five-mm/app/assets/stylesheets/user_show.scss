@@ -4,3 +4,11 @@
   margin-top: $margin;
   padding-left: $padding;
 }
+
+#user-show-container a {
+  width: 100%;
+}
+
+#user-show-container i {
+  margin-right: ($margin - 0.5);
+}

@@ -80,6 +80,15 @@ label {
   color: $white;
 }
 
+.button {
+  background: $navy1;
+  border-radius: $radius;
+}
+
+.button:hover {
+  background: $navy2;
+}
+
 .title-area h1 {
   font-size: 62px;
   margin-bottom: 0;
