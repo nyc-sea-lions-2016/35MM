@@ -10,6 +10,12 @@
   margin-left: ($margin * 3);
 }
 
+#search-button {
+  margin-left: ($margin * 32);
+  margin-top: ($margin);
+  width: 20%;
+}
+
 #film-container {
   padding-left: 8%;
   display: inline-block;
