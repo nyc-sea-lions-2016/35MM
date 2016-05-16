@@ -1,0 +1,10 @@
+@import "components/_variables.scss";
+
+#create-new-film-container h1 {
+  text-align: center;
+}
+
+#create-new-film-container .button {
+  margin-top: ($margin);
+  margin-left: ($margin * 9.75);
+}
