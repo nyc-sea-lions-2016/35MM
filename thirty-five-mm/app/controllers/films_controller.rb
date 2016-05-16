@@ -24,6 +24,7 @@ class FilmsController < ApplicationController
   end
 
   def destroy
+
   end
 
   def search

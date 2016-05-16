@@ -9,8 +9,8 @@
       <div>
         <%= link_to "Delete Comment", film_comment_path(@film, comment),
                                       method: :delete,
-                                      data: { confirm: "Are you sure?" },
-                                      remote: true,
+                                      # data: { confirm: "Are you sure?" },
+                                      # remote: true,
                                       class: "delete-comment button" %>
       </div>
       <% end %>
