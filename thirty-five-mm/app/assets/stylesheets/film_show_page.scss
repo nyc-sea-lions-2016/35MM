@@ -20,15 +20,6 @@
   padding: $padding $padding $padding ($padding * 2);
 }
 
-#comment-listing-container {
-  margin: $margin 0 $margin $margin;
-  padding-top: ($padding - 0.4);
-  padding-left:($padding * 3);
-  border-radius: $radius;
-  background-color: $dark-grey;
-  width: 90%;
-}
-
 .new-comment-button {
   text-align: center;
 }

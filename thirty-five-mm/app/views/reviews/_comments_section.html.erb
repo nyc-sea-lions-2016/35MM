@@ -1,11 +1,18 @@
-<div id='review-comments-container'>
+<div class="comment-listing-container">
+  <ul class="comment-listing">
   <h2>Comments</h2>
-    <ul>
     <% @review.comments.reverse.each do |comment| %>
-      <li class='individual-comment'>
+      <div class='individual-comment'>
         <p><%= comment.content %></p>
-        <%= link_to 'Delete Comment', "/reviews/#{@review.id}/comments/#{comment.id}", method: :delete, class: 'button delete-comment-button' %>
-      </li>
+        <small>Written by <%= link_to comment.user.username, user_path(comment.user) %> at <%= comment.created_at.strftime('%F') %></small>
+        <% if comment.user == current_user %>
+          <%= link_to 'Delete Comment', review_comment_path(@review, comment),
+                                        method: :delete,
+                                        data: { confirm: "Are you sure?" },
+                                        remote: true,
+                                        class: 'button delete-comment-button' %>
+        <% end %>
+      </div>
     <% end %>
     </ul>
     <div>
