@@ -9,7 +9,7 @@
       </div>
   </div>
 
-  <div class='medium-8 columns review-section-wrapper'>
+  <div class="medium-8 columns">
     <h2>Reviews</h2>
     <% @user.reviews.each do |rev| %>
       <h4 class='user-review-film-title'><%= rev.film.title %></h4>
@@ -19,7 +19,7 @@
 
     <h2>Comments</h2>
     <% @user.comments.each do |com| %>
-      <p class='user-comment-content'><%= com.content %></p>
+      <p><%= com.content %></p>
     <% end %>
   </div>
 </div>
