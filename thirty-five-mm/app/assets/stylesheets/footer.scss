@@ -2,12 +2,11 @@
 
 .footer {
   margin-top: ($margin * 4);
+  background: $dark-grey;
   text-align: center;
-  padding-bottom: ($padding * 4);
 }
 
 .footer .large-12 {
-  background: $dark-grey;
   padding: ($padding * 4) 0;
 }
 
