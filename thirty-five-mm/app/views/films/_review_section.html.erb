@@ -6,7 +6,9 @@
   <% end %>
   <div class='review-listing-container'>
     <div class='featured-review'>
+      <% if @film.reviews.any?  %>
         <%= @film.reviews.first.content %>
+      <% end %>
     </div>
   </div>
 </div>
