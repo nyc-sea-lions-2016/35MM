@@ -4,3 +4,13 @@
   margin-top: $margin;
   padding-left: $padding;
 }
+
+#user-show-container a {
+  width: 100%;
+  background: $navy1;
+  border-radius: $radius;
+}
+
+#user-show-container i {
+  margin-right: ($margin - 0.5);
+}
