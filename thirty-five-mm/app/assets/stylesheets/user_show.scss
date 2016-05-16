@@ -1,6 +1,8 @@
-.user-information {
-  margin-top: 20%;
-  padding-left: 10%;
+@import "components/_variables.scss";
+
+#user-show-container #user-information {
+  margin-top: $margin;
+  padding-left: $padding;
 }
 
 .user-review-film-title {
