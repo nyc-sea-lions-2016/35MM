@@ -3,6 +3,7 @@
   <h2>Comments</h2>
     <% @review.comments.reverse.each do |comment| %>
       <div class='individual-comment'>
+        <%= image_tag("Oscar1", height: "48", width: "48") %>
         <p><%= comment.content %></p>
         <small>Written by <%= link_to comment.user.username, user_path(comment.user) %> at <%= comment.created_at.strftime('%F') %></small>
         <% if comment.user == current_user %>

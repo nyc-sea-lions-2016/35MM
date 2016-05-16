@@ -2,8 +2,9 @@
 
 .individual-comment {
   margin-bottom: ($margin * 2);
-  padding: $padding;
-  background: $grey;
+  padding-top: ($padding);
+  padding-left: $padding;
+  background: $navy1;
   width: 80%;
   border-radius: $radius;
 }
