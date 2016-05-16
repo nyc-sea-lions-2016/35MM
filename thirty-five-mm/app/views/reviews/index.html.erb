@@ -1,15 +1,15 @@
-<div class='reviews-index-container'>
-	<% @film.reviews.each do |review| %>
-		<div class='individual-index-review'>
-			<div>
-				<h3 id='review-index-username'><%= review.user.username %></h3>
-			</div>
-			<div>
-				<p id='review-index-content'><%= review.content %></p>
-			</div>
-			<div class='review-show-link'>
-				<%= link_to 'View Review', film_review_path(@film, review), class: 'button' %>
-			</div>
+<div class="row">
+	<div class=" large-8 large-centered columns">
+		<div class='reviews-index-container'>
+			<h2>Film Review Index</h2>
+			<% @film.reviews.each do |review| %>
+				<div class='individual-index-review'>
+						<h3><%= review.user.username %></h3>
+						<p id="review-creation-time">Created At: <%= review.created_at.strftime('%F') %></p>
+						<p><%= review.content %></p>
+						<%= link_to 'View Review', film_review_path(@film, review), class: 'button' %>
+				</div>
+			<% end %>
 		</div>
-	<% end %>
+	</div>
 </div>
