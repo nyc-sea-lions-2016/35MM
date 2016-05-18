@@ -2,8 +2,13 @@
 
 .footer {
   margin-top: ($margin * 4);
+  transition: background-color 1s ease;
   background: $dark-grey;
   text-align: center;
+}
+
+.footer:hover {
+  background: $light-grey;
 }
 
 .footer .large-12 {
