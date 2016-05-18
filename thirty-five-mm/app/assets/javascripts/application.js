@@ -110,11 +110,5 @@ $(document).ready(function() {
       $(this).animate({opacity: 0.5}, 500);
     });
 
-    //Set Timeout for flash message
-
-    setTimeout(function() {
-      $('.flash').fadeOut(800);
-    }, 4000);
-
 
 });
